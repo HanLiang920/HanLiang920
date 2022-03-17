@@ -21,15 +21,16 @@ const atomInfo = computed(() => {
 });
 console.log(atomInfo, cartCoords);
 const position = computed(() => {
- const [x,y,z] =cartCoords.split(" ");
+ const [x,y,z] =cartCoords.split(" ").map(it=>Number(it));
+ return `${z} ${x} ${y}`
   return ;
 });
 </script>
 
 <template>
-  <a-entity :geometry="`primitive: sphere; radius: ${atomInfo.radius}`"
+  <a-entity :geometry="`primitive: sphere; radius: ${atomInfo.radius/2}`"
             :material="`color: ${atomInfo.color}`"
-            :position="cartCoords"></a-entity>
+            :position="position"></a-entity>
 </template>
 
 <style scoped>

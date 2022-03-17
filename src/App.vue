@@ -3,7 +3,7 @@
     <a-scene>
       
       <a-sky color="#ECECEC"></a-sky>
-      <MyAtom />
+      <CH4 />
     </a-scene>
 
 </template>
@@ -11,8 +11,7 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import MyAtom from './components/MyAtom.vue'
+import CH4 from './components/CH4.vue'
 </script>
 
 <style>

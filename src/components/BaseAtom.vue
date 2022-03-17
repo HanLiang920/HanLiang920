@@ -11,7 +11,7 @@ const atomInfos = {
 };
 import { ref, computed } from "vue";
 
-const {symbol,cartCoords} = defineProps({
+const { symbol, cartCoords } = defineProps({
   symbol: String,
   cartCoords: String,
 });
@@ -19,14 +19,16 @@ const {symbol,cartCoords} = defineProps({
 const atomInfo = computed(() => {
   return atomInfos[symbol];
 });
-console.log(atomInfo,cartCoords);
-
-
+console.log(atomInfo, cartCoords);
+const position = computed(() => {
+ const [x,y,z] =cartCoords.split(" ");
+  return ;
+});
 </script>
 
 <template>
   <a-entity :geometry="`primitive: sphere; radius: ${atomInfo.radius}`"
-            material="color: red"
+            :material="`color: ${atomInfo.color}`"
             :position="cartCoords"></a-entity>
 </template>
 

@@ -74,7 +74,7 @@ const fragment = reactive({
 </script>
 
 <template>
-  <BaseAtom v-for="(atom,i) in fragment.atom" :key="i" :symbol="atom.symbol" :cartCoords="atom.cartCoords"/>
+  <BaseAtom v-for="atom, in fragment.atom" :key="id"  :symbol="atom.symbol" :cartCoords="atom.cartCoords"/>
 </template>
 
 <style scoped>

@@ -23,7 +23,6 @@ console.log(atomInfo, cartCoords);
 const position = computed(() => {
  const [x,y,z] =cartCoords.split(" ").map(it=>Number(it));
  return `${z} ${x} ${y}`
-  return ;
 });
 </script>
 

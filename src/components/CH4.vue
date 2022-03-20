@@ -1,83 +1,23 @@
 <script setup>
-    import BaseAtom from './BaseAtom.vue'
+import BaseAtom from './BaseAtom.vue'
+import BaseBond from './BaseBond.vue'
 import { ref, reactive } from "vue";
 
-const fragment = reactive({
-  atom: [
-    {
-      id: "6",
-      atType: "C Alkane",
-      symbol: "C",
-      userNum: "1",
-      cartCoords: "1.42654 -4.28633 0.403219",
-    },
-    {
-      id: "7",
-      atType: "H",
-      symbol: "H",
-      userNum: "2",
-      cartCoords: "0.937213 -3.28667 0.403871",
-    },
-    {
-      id: "9",
-      atType: "H",
-      symbol: "H",
-      userNum: "3",
-      cartCoords: "2.53217 -4.15879 0.41203",
-    },
-    {
-      id: "11",
-      atType: "H",
-      symbol: "H",
-      userNum: "4",
-      cartCoords: "1.11182 -4.85344 1.30771",
-    },
-    {
-      id: "13",
-      atType: "H",
-      symbol: "H",
-      userNum: "5",
-      cartCoords: "1.1251 -4.84616 -0.510291",
-    },
-  ],
-  bond: [
-    {
-      id: "5",
-      bondAtom1: "6",
-      bondAtom2: "7",
-      bondOrderType: "0",
-      bondOrder: "1",
-    },
-    {
-      id: "8",
-      bondAtom1: "6",
-      bondAtom2: "9",
-      bondOrderType: "0",
-      bondOrder: "1",
-    },
-    {
-      id: "10",
-      bondAtom1: "6",
-      bondAtom2: "11",
-      bondOrderType: "0",
-      bondOrder: "1",
-    },
-    {
-      id: "12",
-      bondAtom1: "6",
-      bondAtom2: "13",
-      bondOrderType: "0",
-      bondOrder: "1",
-    },
-  ],
-});
+const fragment = reactive(window.c3Data.CH4);
 </script>
 
 <template>
- <a-entity>
-   <BaseAtom v-for="atom in fragment.atom" :key="atom.id"  :symbol="atom.symbol" :cartCoords="atom.cartCoords"/>
- </a-entity>
-  
+  <a-entity>
+    <BaseAtom v-for="atom in fragment.atom" :key="atom.id" v-bind="atom" />
+    <BaseBond
+      v-for="bond in fragment.bond"
+      :key="bond.id"
+      :bondAtom1="fragment.atom[bond.bondAtom1]"
+      :bondAtom2="fragment.atom[bond.bondAtom2]"
+      :bondOrderType="bond.bondOrderType"
+      :bondOrder="bond.bondOrder"
+    />
+  </a-entity>
 </template>
 
 <style scoped>

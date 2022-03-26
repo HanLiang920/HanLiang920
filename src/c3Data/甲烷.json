@@ -1,67 +1,67 @@
 {
   "atom": [
     {
-      "id": "6",
+      "id": "5",
       "atType": "C Alkane",
       "symbol": "C",
       "userNum": "1",
-      "cartCoords": "1.42654 -4.28633 0.403219"
+      "cartCoords": "-4.18758e-05 -4.76308e-05 -8.9706e-05"
+    },
+    {
+      "id": "6",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "2",
+      "cartCoords": "-0.258523 1.08252 -8.9706e-05"
     },
     {
       "id": "7",
       "atType": "H",
       "symbol": "H",
-      "userNum": "2",
-      "cartCoords": "0.937213 -3.28667 0.403871"
+      "userNum": "3",
+      "cartCoords": "1.10672 -0.117761 -8.9706e-05"
+    },
+    {
+      "id": "8",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "4",
+      "cartCoords": "-0.423866 -0.482118 0.909169"
     },
     {
       "id": "9",
       "atType": "H",
       "symbol": "H",
-      "userNum": "3",
-      "cartCoords": "2.53217 -4.15879 0.41203"
-    },
-    {
-      "id": "11",
-      "atType": "H",
-      "symbol": "H",
-      "userNum": "4",
-      "cartCoords": "1.11182 -4.85344 1.30771"
-    },
-    {
-      "id": "13",
-      "atType": "H",
-      "symbol": "H",
       "userNum": "5",
-      "cartCoords": "1.1251 -4.84616 -0.510291"
+      "cartCoords": "-0.424285 -0.482595 -0.908899"
     }
   ],
   "bond": [
     {
-      "id": "5",
-      "bondAtom1": "6",
+      "id": "10",
+      "bondAtom1": "5",
+      "bondAtom2": "6",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "11",
+      "bondAtom1": "5",
       "bondAtom2": "7",
       "bondOrderType": "0",
       "bondOrder": "1"
     },
     {
-      "id": "8",
-      "bondAtom1": "6",
-      "bondAtom2": "9",
-      "bondOrderType": "0",
-      "bondOrder": "1"
-    },
-    {
-      "id": "10",
-      "bondAtom1": "6",
-      "bondAtom2": "11",
-      "bondOrderType": "0",
-      "bondOrder": "1"
-    },
-    {
       "id": "12",
-      "bondAtom1": "6",
-      "bondAtom2": "13",
+      "bondAtom1": "5",
+      "bondAtom2": "8",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "13",
+      "bondAtom1": "5",
+      "bondAtom2": "9",
       "bondOrderType": "0",
       "bondOrder": "1"
     }

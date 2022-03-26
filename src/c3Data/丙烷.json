@@ -1,0 +1,153 @@
+{
+  "atom": [
+    {
+      "id": "5",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "4",
+      "cartCoords": "-0.508397 -0.598954 -1.36072"
+    },
+    {
+      "id": "6",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "3",
+      "cartCoords": "-1.29548 0.765055 -0.452235"
+    },
+    {
+      "id": "7",
+      "atType": "C Alkane",
+      "symbol": "C",
+      "userNum": "2",
+      "cartCoords": "0.86907 0.80286 -0.452235"
+    },
+    {
+      "id": "8",
+      "atType": "C Alkane",
+      "symbol": "C",
+      "userNum": "1",
+      "cartCoords": "-0.449887 0.0413605 -0.452235"
+    },
+    {
+      "id": "9",
+      "atType": "C Alkane",
+      "symbol": "C",
+      "userNum": "5",
+      "cartCoords": "-0.531648 -0.833801 0.791524"
+    },
+    {
+      "id": "10",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "8",
+      "cartCoords": "0.92758 1.44317 0.456248"
+    },
+    {
+      "id": "11",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "7",
+      "cartCoords": "1.71467 0.0791652 -0.452235"
+    },
+    {
+      "id": "12",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "6",
+      "cartCoords": "0.928821 1.44242 -1.36117"
+    },
+    {
+      "id": "13",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "11",
+      "cartCoords": "-0.473138 -0.193487 1.70001"
+    },
+    {
+      "id": "14",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "10",
+      "cartCoords": "0.313949 -1.5575 0.791524"
+    },
+    {
+      "id": "15",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "9",
+      "cartCoords": "-1.49553 -1.3903 0.791524"
+    }
+  ],
+  "bond": [
+    {
+      "id": "16",
+      "bondAtom1": "8",
+      "bondAtom2": "5",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "17",
+      "bondAtom1": "8",
+      "bondAtom2": "6",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "18",
+      "bondAtom1": "8",
+      "bondAtom2": "7",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "19",
+      "bondAtom1": "8",
+      "bondAtom2": "9",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "20",
+      "bondAtom1": "7",
+      "bondAtom2": "10",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "21",
+      "bondAtom1": "7",
+      "bondAtom2": "11",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "22",
+      "bondAtom1": "7",
+      "bondAtom2": "12",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "23",
+      "bondAtom1": "9",
+      "bondAtom2": "13",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "24",
+      "bondAtom1": "9",
+      "bondAtom2": "14",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "25",
+      "bondAtom1": "9",
+      "bondAtom2": "15",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    }
+  ]
+}

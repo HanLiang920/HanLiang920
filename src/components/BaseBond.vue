@@ -1,6 +1,10 @@
 <script setup>
 import { ref, computed } from "vue";
 
+// bondOrderType 0 C-H
+// bondOrderType 13 C=C
+// bondOrderType 14 C≡C
+// bondOrderType 15 C=C/C-C 苯环
 
 
 const { bondAtom1, bondAtom2, bondOrderType, bondOrder } = defineProps({
@@ -45,26 +49,67 @@ function getRotation([x, y, z], [x1, y1, z1]) {
 
 
 function getAngle([x1, y1], [x2, y2], r) {
-    console.log(Math.pow(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2), 0.5), [x1, y1], [x2, y2], r);
     y2 = y2 - r
     if (y1 === y2) return 0
     x1 = x2 + r
     const length = Math.pow(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2), 0.5) / 2
     const angle = Math.asin(length / r) * 180 / Math.PI * 2
-    console.log(angle);
     return x1 > x2 ? angle : -angle
 }
 
 </script>
  
 <template>
-    <a-entity
-        :position="bondInfo.position"
-        :scale="`1 ${bondInfo.length / 0.2} 1`"
-        :rotation="bondInfo.rotation"
-    >
-        <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0"></a-cylinder>
-        <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0"></a-cylinder>
+    <a-entity :position="bondInfo.position" :scale="`1 ${bondInfo.length / 0.2} 1`" :rotation="bondInfo.rotation">
+        <template v-if="bondOrderType == 15">
+            <a-entity position="0.1 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0"></a-cylinder>
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0"></a-cylinder>
+            </a-entity>
+            <a-entity position="-0.1 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0"></a-cylinder>
+            </a-entity>
+        </template>
+        <template v-else-if="bondOrderType == 14">
+            <a-entity position="0.15 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+                </a-cylinder>
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+                </a-cylinder>
+            </a-entity>
+            <a-entity position="0 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+                </a-cylinder>
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+                </a-cylinder>
+            </a-entity>
+            <a-entity position="-0.15 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+                </a-cylinder>
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+                </a-cylinder>
+            </a-entity>
+        </template>
+        <template v-else-if="bondOrderType == 13">
+            <a-entity position="0.1 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+                </a-cylinder>
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+                </a-cylinder>
+            </a-entity>
+            <a-entity position="-0.1 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+                </a-cylinder>
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+                </a-cylinder>
+            </a-entity>
+        </template>
+        <template v-else>
+            <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+            </a-cylinder>
+            <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+            </a-cylinder>
+        </template>
     </a-entity>
 </template>
 

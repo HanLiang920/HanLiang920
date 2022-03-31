@@ -1,11 +1,12 @@
 import { createApp } from 'vue'
+import { createStore } from 'vuex'
 import App from './App.vue'
+import store from './store'
 import AFRAME from 'aframe';
 
 const c3Data = {}
 const modules = import.meta.globEager('./c3Data/*.json')
 for (const path in modules) {
-    console.log(path);
     const name = path.split('/').pop().replace('.json', '')
     c3Data[name] = getc3Data(modules[path].default)
 }
@@ -31,5 +32,5 @@ window.atomInfos = {
 };
 
 const app = createApp(App);
-app.use(AFRAME);
+app.use(AFRAME).use(createStore(store))
 app.mount('#app')

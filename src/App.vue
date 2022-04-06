@@ -7,7 +7,7 @@
   <div class="chem-3d-content">
     <a-scene vr-mode-ui="enabled: false">
       <a-sky color="#ECECEC"></a-sky>
-      <fragment :type="currentModel[0]" :key="currentModel[0]" position="0 1 0"/>
+      <fragment :type="currentModel[0]" :key="currentModel[0]" position="0 2.6 0"/>
       <!-- <fragment type="乙烷"  />
       <fragment type="乙烯" position="0 0 0" />
       <fragment type="乙炔" position="6 0 0" />
@@ -20,9 +20,9 @@
     v-model:visible="visible"
     title="选择模型"
     placement="left"
-    @after-visible-change="afterVisibleChange"
+    width="60%"
   >
-    <a-menu v-model:selectedKeys="currentModel">
+    <a-menu v-model:selectedKeys="currentModel" @click="visible = false">
       <a-menu-item v-for="it in modelList" :key="it.name">{{ it.name }}</a-menu-item>
     </a-menu>
   </a-drawer>

@@ -47,16 +47,6 @@ function getRotation([x, y, z], [x1, y1, z1]) {
     return `0 ${yaw} ${roll}`
 }
 
-
-function getAngle([x1, y1], [x2, y2], r) {
-    y2 = y2 - r
-    if (y1 === y2) return 0
-    x1 = x2 + r
-    const length = Math.pow(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2), 0.5) / 2
-    const angle = Math.asin(length / r) * 180 / Math.PI * 2
-    return x1 > x2 ? angle : -angle
-}
-
 </script>
  
 <template>

@@ -1,6 +1,11 @@
 <template>
-   <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
-    <a-scene>
+  <div class="chem-3d-header">
+    <menu-outlined @click="visible = true" style="font-size: 20px;opacity: 0.5;"/>
+    <span>Chem3D</span>
+    <span style="width:20px"></span>
+  </div>
+  <div class="chem-3d-content">
+    <a-scene  vr-mode-ui="enabled: false">
       <a-sky color="#ECECEC"></a-sky>
       <!-- <fragment type="甲烷" position="0 0 0"/> -->
       <fragment type="乙烷" position="-4 0 0"/>
@@ -8,17 +13,54 @@
       <fragment type="乙炔" position="6 0 0"/>
       <fragment type="苯" position="10 0 0"/>
       <BaseCamera />
+      <a-sky src="#sky"></a-sky>
     </a-scene>
-
+  </div>
+  <a-drawer
+    v-model:visible="visible"
+    title="选择模型"
+    placement="left"
+    @after-visible-change="afterVisibleChange"
+  >
+    <p v-for="it in modelList" :key="it.name">{{it.name}}</p>
+  </a-drawer>
 </template>
 
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import { MenuOutlined } from '@ant-design/icons-vue';
 import fragment from './components/fragment.vue'
 import BaseCamera from './components/BaseCamera.vue'
+import { ref } from "vue";
+const visible = ref(false);
+const modelList = ref([
+  {name:'甲烷'},{name:'乙烷'},{name:'丙烷'},{name:'乙烯'},{name:'乙炔'},{name:'苯'}
+]);
+const currentModel = ref('甲烷');
 </script>
 
-<style>
-
+<style lang="scss">
+.chem-3d{
+  font-family: Avenir,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji",sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .chem-3d-header{
+    background: #fff;
+    height: 50px;
+    color: #000000d9;
+    font-weight: 300;
+    font-size: 26px;
+    z-index: 1;
+    border-bottom: 1px solid rgba(60, 60, 60, .12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .chem-3d-content{
+    flex: 1;
+  }
+}
 </style>
+

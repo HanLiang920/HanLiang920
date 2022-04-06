@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import { createStore } from 'vuex'
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
 import App from './App.vue'
 import store from './store'
 import AFRAME from 'aframe';
@@ -27,10 +29,10 @@ window.atomInfos = {
     },
     H: {
         radius: 0.39,
-        color: "white",
+        color: "#cdcdcd",
     },
 };
 
 const app = createApp(App);
-app.use(AFRAME).use(createStore(store))
-app.mount('#app')
+app.use(Antd).use(AFRAME).use(createStore(store))
+app.mount('.chem-3d')

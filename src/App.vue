@@ -1,17 +1,17 @@
 <template>
   <div class="chem-3d-header">
-    <menu-outlined @click="visible = true" style="font-size: 20px;opacity: 0.5;"/>
+    <menu-outlined @click="visible = true" style="font-size: 20px;opacity: 0.5;" />
     <span>Chem3D</span>
     <span style="width:20px"></span>
   </div>
   <div class="chem-3d-content">
-    <a-scene  vr-mode-ui="enabled: false">
+    <a-scene vr-mode-ui="enabled: false">
       <a-sky color="#ECECEC"></a-sky>
-      <!-- <fragment type="甲烷" position="0 0 0"/> -->
-      <fragment type="乙烷" position="-4 0 0"/>
-      <fragment type="乙烯" position="0 0 0"/>
-      <fragment type="乙炔" position="6 0 0"/>
-      <fragment type="苯" position="10 0 0"/>
+      <fragment :type="currentModel[0]" :key="currentModel[0]" position="0 1 0"/>
+      <!-- <fragment type="乙烷"  />
+      <fragment type="乙烯" position="0 0 0" />
+      <fragment type="乙炔" position="6 0 0" />
+      <fragment type="苯" position="10 0 0" /> -->
       <BaseCamera />
       <a-sky src="#sky"></a-sky>
     </a-scene>
@@ -22,7 +22,9 @@
     placement="left"
     @after-visible-change="afterVisibleChange"
   >
-    <p v-for="it in modelList" :key="it.name">{{it.name}}</p>
+    <a-menu v-model:selectedKeys="currentModel">
+      <a-menu-item v-for="it in modelList" :key="it.name">{{ it.name }}</a-menu-item>
+    </a-menu>
   </a-drawer>
 </template>
 
@@ -33,34 +35,44 @@ import BaseCamera from './components/BaseCamera.vue'
 import { ref } from "vue";
 const visible = ref(false);
 const modelList = ref([
-  {name:'甲烷'},{name:'乙烷'},{name:'丙烷'},{name:'乙烯'},{name:'乙炔'},{name:'苯'}
+  { name: '甲烷' }, { name: '乙烷' }, { name: '丙烷' }, { name: '乙烯' }, { name: '乙炔' }, { name: '苯' }
 ]);
-const currentModel = ref('甲烷');
+const currentModel = ref(['甲烷']);
+console.log(currentModel);
 </script>
 
 <style lang="scss">
-.chem-3d{
-  font-family: Avenir,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji",sans-serif;
+.chem-3d {
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji", sans-serif;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  .chem-3d-header{
+  .chem-3d-header {
     background: #fff;
     height: 50px;
     color: #000000d9;
     font-weight: 300;
     font-size: 26px;
     z-index: 1;
-    border-bottom: 1px solid rgba(60, 60, 60, .12);
+    border-bottom: 1px solid rgba(60, 60, 60, 0.12);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
   }
-  .chem-3d-content{
+  .chem-3d-content {
     flex: 1;
   }
+}
+.ant-drawer-header {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.ant-drawer-body {
+  padding: 0;
 }
 </style>
 

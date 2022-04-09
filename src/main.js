@@ -1,10 +1,9 @@
 import { createApp } from 'vue'
 import { createStore } from 'vuex'
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+import { Drawer, Menu } from 'ant-design-vue';
 import App from './App.vue'
 import store from './store'
-import AFRAME from 'aframe';
+import 'ant-design-vue/dist/antd.css';
 
 const c3Data = {}
 const modules = import.meta.globEager('./c3Data/*.json')
@@ -34,5 +33,5 @@ window.atomInfos = {
 };
 
 const app = createApp(App);
-app.use(Antd).use(AFRAME).use(createStore(store))
+app.use(Drawer).use(Menu).use(createStore(store))
 app.mount('.chem-3d')

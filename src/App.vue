@@ -5,13 +5,15 @@
     <span style="width:20px"></span>
   </div>
   <div class="chem-3d-content">
-    <a-scene vr-mode-ui="enabled: false">
+    <a-scene embedded arjs vr-mode-ui="enabled: false">
       <a-sky color="#ECECEC"></a-sky>
-      <fragment :type="currentModel[0]" :key="currentModel[0]" position="0 2.6 0"/>
-      <!-- <fragment type="乙烷"  />
-      <fragment type="乙烯" position="0 0 0" />
-      <fragment type="乙炔" position="6 0 0" />
-      <fragment type="苯" position="10 0 0" /> -->
+      <a-marker preset="hiro">
+        <fragment :type="currentModel[0]" :key="currentModel[0]" position="0 2.6 0"/>
+        <!-- <fragment type="乙烷"  />
+        <fragment type="乙烯" position="0 0 0" />
+        <fragment type="乙炔" position="6 0 0" />
+        <fragment type="苯" position="10 0 0" /> -->
+      </a-marker>
       <BaseCamera />
       <a-sky src="#sky"></a-sky>
     </a-scene>
@@ -48,6 +50,8 @@ console.log(currentModel);
     "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji", sans-serif;
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  left: 0;
   display: flex;
   flex-direction: column;
   .chem-3d-header {

@@ -5,9 +5,9 @@
     <span style="width:20px"></span>
   </div>
   <div class="chem-3d-content">
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;" vr-mode-ui="enabled: false">
       <a-sky color="#ECECEC"></a-sky>
-      <a-marker type="barcode" value="CH4">
+      <a-marker type="barcode" value="0">
         <fragment :type="currentModel[0]" :key="currentModel[0]" position="0 2.6 0"/>
         <!-- <fragment type="乙烷"  />
         <fragment type="乙烯" position="0 0 0" />

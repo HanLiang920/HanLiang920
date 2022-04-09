@@ -7,7 +7,7 @@
   <div class="chem-3d-content">
     <a-scene embedded arjs vr-mode-ui="enabled: false">
       <a-sky color="#ECECEC"></a-sky>
-      <a-marker preset="hiro">
+      <a-marker type="barcode" value="CH4">
         <fragment :type="currentModel[0]" :key="currentModel[0]" position="0 2.6 0"/>
         <!-- <fragment type="乙烷"  />
         <fragment type="乙烯" position="0 0 0" />

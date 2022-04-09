@@ -7,11 +7,14 @@
   <div class="chem-3d-content">
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;" vr-mode-ui="enabled: false">
       <a-marker type="barcode" value="0">
-        <fragment :type="currentModel[0]" :key="currentModel[0]"/>
+        <fragment type="甲烷" :key="currentModel[0]"/>
         <!-- <fragment type="乙烷"  />
         <fragment type="乙烯" position="0 0 0" />
         <fragment type="乙炔" position="6 0 0" />
         <fragment type="苯" position="10 0 0" /> -->
+      </a-marker>
+        <a-marker type="barcode" value="1">
+        <fragment type="乙烷" :key="currentModel[0]"/>
       </a-marker>
       <BaseCamera />
     </a-scene>

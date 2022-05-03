@@ -1,0 +1,37 @@
+<script setup>
+
+const { mode } = defineProps({
+    mode: String
+});
+defineEmits(['update:mode'])
+</script>
+
+<template>
+    <div class="mode-choose">
+        <div :class="{ 'mode-choose-item': true, choose: mode == 'AR' }" @click="$emit('update:mode', 'AR')">AR</div>
+        <div :class="{ 'mode-choose-item': true, choose: mode != 'AR' }" @click="$emit('update:mode', '模型')">模型</div>
+    </div>
+</template>
+
+<style scoped lang="scss">
+.mode-choose {
+    width: 40%;
+    display: flex;
+
+    .mode-choose-item {
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.choose {
+            background: #141414;
+            border-radius: 4vw;
+            color:#1890ff;
+        }
+    }
+}
+</style>

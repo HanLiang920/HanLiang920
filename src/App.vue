@@ -1,13 +1,16 @@
 <template>
   <div class="chem-3d-header">
-    <menu-outlined @click="visible = true" style="font-size: 20px;opacity: 0.5;" />
-    <span>Chem3D</span>
-    <span style="width:20px"></span>
+    <div :style="{ width: '14.7%', visibility: mode == 'AR' ? 'hidden' : 'visible' }" >
+      <menu-outlined @click="visible = true" />
+    </div>
+
+    <modeChoose v-model:mode="mode"></modeChoose>
+    <div style="width:14.7%;height:0"></div>
   </div>
   <a-scene embedded
     arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;"
     vr-mode-ui="enabled: false">
-    <template v-if="!currentModel">
+    <template v-if="mode == 'AR'">
       <a-marker type="barcode" value="0" smooth="true">
         <fragment type="甲烷" />
       </a-marker>
@@ -16,7 +19,7 @@
       </a-marker>
     </template>
     <template v-else>
-      <fragment :type="currentModel" :key="currentModel" position="0 0 -9" />
+      <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
       <a-sky></a-sky>
     </template>
 
@@ -35,23 +38,27 @@
 
     </a-menu>
   </a-drawer>
-  <input v-show="false" type="file" ref="openFile" accept=".c3xml" @change="openModel" />
+  <input v-show="false" type="file" ref="openFile" accept="chemical/x-c3xml" @change="openModel" />
 </template>
 
 <script setup>
 import { MenuOutlined } from '@ant-design/icons-vue';
+import modeChoose from './components/modeChoose.vue'
 import fragment from './components/fragment.vue'
 import BaseCamera from './components/BaseCamera.vue'
 import { ref } from "vue";
 import { xml2json, parseXml, getc3Data } from './utils'
+const mode = ref('AR');
 const visible = ref(false);
 const modelList = ref([
   { name: '甲烷' }, { name: '乙烷' }, { name: '丙烷' }, { name: '乙烯' }, { name: '乙炔' }, { name: '苯' }
 ]);
 const currentModel = ref('');
 const openModel = (event) => {
+
   const path = event.target.value
   const file = event.target.files[0];
+  console.log(event, file);
   const reader = new FileReader();
   reader.onload = function (event) {
     let { C3XML: { model: { group: { fragment } } } } = JSON.parse(xml2json(parseXml(event.target.result)))
@@ -89,20 +96,28 @@ body {
 
   .chem-3d-header {
     position: fixed;
-    top: 0;
+    top: 15px;
     right: 0;
     left: 0;
-    background: #fff;
-    height: 50px;
-    color: #000000d9;
-    font-weight: 300;
-    font-size: 26px;
+    height: 6.3vh;
+    color: #e3e3e3;
+    font-size: 18px;
     z-index: 1;
-    border-bottom: 1px solid rgba(60, 60, 60, 0.12);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+
+    &>div {
+      height: 100%;
+      background: #868686;
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: 4vw;
+    }
   }
 }
 

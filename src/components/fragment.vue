@@ -1,7 +1,7 @@
 <script setup>
 import BaseAtom from './BaseAtom.vue'
 import BaseBond from './BaseBond.vue'
-import { ref, reactive, computed } from "vue";
+import { reactive, computed } from "vue";
 
 const { type } = defineProps({
   type: String

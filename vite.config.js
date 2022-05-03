@@ -1,16 +1,22 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'./',
-  plugins: [vue(
-    {
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => ['a-scene','a-sky','a-entity','a-cylinder','a-camera'].includes(tag)
+  base: './',
+  plugins: [
+    Components({
+      resolvers: [AntDesignVueResolver()]
+    }),
+    vue(
+      {
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => ['a-scene', 'a-sky', 'a-entity', 'a-cylinder', 'a-camera','a-marker'].includes(tag)
+          }
         }
       }
-    }
-  )]
+    )]
 })

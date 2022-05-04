@@ -1,11 +1,11 @@
 <template>
   <div class="chem-3d-header">
-    <div :style="{ width: '14.7%', visibility: mode == 'AR' ? 'hidden' : 'visible' }" >
+    <div :style="{ width: '14%', visibility: mode == 'AR' ? 'hidden' : 'visible' }" >
       <menu-outlined @click="visible = true" />
     </div>
 
     <modeChoose v-model:mode="mode"></modeChoose>
-    <div style="width:14.7%;height:0"></div>
+    <div style="width:14%;height:0"></div>
   </div>
   <a-scene embedded
     arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;"
@@ -96,17 +96,17 @@ body {
 
   .chem-3d-header {
     position: fixed;
-    top: 15px;
+    top: 10px;
     right: 0;
     left: 0;
-    height: 6.3vh;
+    height: 6vh;
     color: #e3e3e3;
-    font-size: 18px;
+    font-size: 16px;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 10px;
 
     &>div {
       height: 100%;

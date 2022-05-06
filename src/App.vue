@@ -8,6 +8,7 @@
     <div style="width:14%;height:0"></div>
   </div>
   <a-scene embedded
+  fog="type: linear;"
            renderer="antialias: true;
                    colorManagement: true;
                    sortObjects: true;
@@ -30,6 +31,12 @@
     </template>
 
     <a-entity camera></a-entity>
+    <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
+  <a-entity light="type: directional;
+                   castShadow: true;
+                   intensity: 1.6;"
+            position="-5 3 1.5"></a-entity>
+
   </a-scene>
   <a-drawer v-model:visible="visible" title="" placement="left" width="60%">
     <a-menu :selectable="false" mode="inline">

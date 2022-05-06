@@ -19,7 +19,7 @@ const position = computed(() => {
 <template>
   <a-entity
     :geometry="`primitive: sphere; radius: ${atomInfo.radius}`"
-    :material="`color: ${atomInfo.color}`"
+    :material="`color: ${atomInfo.color};roughness: 0.25; metalness: 0.2`"
     :position="position"
   ></a-entity>
 </template>

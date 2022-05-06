@@ -1,13 +1,19 @@
 <template>
   <div class="chem-3d-header">
-    <div :style="{ width: '14%', visibility: mode == 'AR' ? 'hidden' : 'visible' }" >
-      <menu-outlined @click="visible = true" />
+    <div :style="{ width: '14%', visibility: mode == 'AR' ? 'hidden' : 'visible',  cursor: 'pointer' }"  @click="visible = true" >
+      <menu-outlined />
     </div>
 
     <modeChoose v-model:mode="mode"></modeChoose>
     <div style="width:14%;height:0"></div>
   </div>
   <a-scene embedded
+           renderer="antialias: true;
+                   colorManagement: true;
+                   sortObjects: true;
+                   physicallyCorrectLights: true;
+                   maxCanvasWidth: -1;
+                   maxCanvasHeight: -1;"
     arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;"
     vr-mode-ui="enabled: false">
     <template v-if="mode == 'AR'">

@@ -8,7 +8,7 @@
     <div style="width:14%;height:0"></div>
   </div>
   <a-scene embedded
-  fog="type: linear;"
+          fog="type: linear;"
            renderer="antialias: true;
                    colorManagement: true;
                    sortObjects: true;
@@ -29,8 +29,8 @@
       <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
       <a-sky></a-sky>
     </template>
-
-    <a-entity camera></a-entity>
+<!-- 
+    <a-entity camera></a-entity> -->
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
   <a-entity light="type: directional;
                    castShadow: true;

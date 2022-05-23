@@ -9,8 +9,8 @@ const { value, type } = defineProps({
 const el = ref()
 onMounted(() => {
   const marker = el.value
-  marker.addEventListener('markerFound', () => {
-    
+  marker.addEventListener('markerFound', (...e) => {
+    console.log(e);
   });
 
   marker.addEventListener('markerLost', () => {

@@ -18,12 +18,8 @@
     arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;"
     vr-mode-ui="enabled: false">
     <template v-if="mode == 'AR'">
-      <a-marker type="barcode" value="0" smooth="true">
-        <fragment type="甲烷" />
-      </a-marker>
-      <a-marker type="barcode" value="1" smooth="true">
-        <fragment type="乙烷" />
-      </a-marker>
+      <BaseMarker value="0" type="甲烷"/>
+      <BaseMarker value="1" type="乙烷"/>
     </template>
     <template v-else>
       <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
@@ -59,6 +55,7 @@ import { MenuOutlined } from '@ant-design/icons-vue';
 import modeChoose from './components/modeChoose.vue'
 import fragment from './components/fragment.vue'
 import BaseCamera from './components/BaseCamera.vue'
+import BaseMarker from './components/BaseMarker.vue'
 import { ref } from "vue";
 import { xml2json, parseXml, getc3Data } from './utils'
 const mode = ref('AR');

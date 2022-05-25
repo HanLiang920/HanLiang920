@@ -1,9 +1,8 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createPinia,defineStore } from 'pinia'
 import { Drawer, Menu } from 'ant-design-vue';
 import {getc3Data} from './utils'
 import App from './App.vue'
-import store from './store'
 
 const c3Data = {}
 const modules = import.meta.globEager('./c3Data/*.json')

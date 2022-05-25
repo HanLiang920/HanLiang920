@@ -18,8 +18,8 @@
     arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;"
     vr-mode-ui="enabled: false">
     <template v-if="mode == 'AR'">
-      <BaseMarker value="0" type="甲烷"/>
-      <BaseMarker value="1" type="乙烷"/>
+      <BaseMarker id="0" type="甲烷"/>
+      <BaseMarker id="1" type="乙烷"/>
     </template>
     <template v-else>
       <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />

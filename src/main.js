@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createStore } from 'vuex'
+import { createPinia } from 'pinia'
 import { Drawer, Menu } from 'ant-design-vue';
 import {getc3Data} from './utils'
 import App from './App.vue'
@@ -25,5 +25,5 @@ window.atomInfos = {
 };
 
 const app = createApp(App);
-app.use(Drawer).use(Menu).use(createStore(store))
+app.use(Drawer).use(Menu).use(createPinia())
 app.mount('.chem-3d')

@@ -2,12 +2,14 @@
 import BaseAtom from './BaseAtom.vue'
 import BaseBond from './BaseBond.vue'
 import { reactive, computed } from "vue";
+import { useStore } from '../stores/index'
+const store = useStore()
 
 const { type } = defineProps({
   type: String
 });
 
-const fragment = reactive(window.c3Data[type]);
+const fragment = reactive(store.c3Data[type]);
 const isArray = computed(() => {
   return Array.isArray(fragment)
 });

@@ -173,7 +173,7 @@ export function getc3Data(data) {
     const atom = {}
     data.atom.forEach(it => {
         const { id, symbol, cartCoords } = it
-        const [y, z, x] = cartCoords.split(" ").map(it => Number(it))
+        const [x, y, z] = cartCoords.split(" ").map(it => Number(it))
         atom[id] = { symbol, x, y, z }
     });
     return { atom, bond: data.bond }

@@ -1,5 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
+import { useStore } from '../stores/index'
+import { storeToRefs } from 'pinia'
+const store = useStore()
+const { atomInfos } = storeToRefs(store)
 
 // bondOrderType 0 C-H
 // bondOrderType 13 C=C
@@ -14,10 +18,10 @@ const { bondAtom1, bondAtom2, bondOrderType, bondOrder } = defineProps({
     bondOrder: String,
 });
 const bondAtom1Info = computed(() => {
-    return window.atomInfos[bondAtom1.symbol]
+    return atomInfos.value[bondAtom1.symbol]
 });
 const bondAtom2Info = computed(() => {
-    return window.atomInfos[bondAtom2.symbol]
+    return atomInfos.value[bondAtom2.symbol]
 });
 const bondInfo = computed(() => {
     const { x: x1, y: y1, z: z1 } = bondAtom1

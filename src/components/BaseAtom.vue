@@ -1,6 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
-
+import { storeToRefs } from 'pinia'
+import { useStore } from '../stores/index'
+const store = useStore()
+const { atomInfos } = storeToRefs(store)
 const { symbol, x,y,z } = defineProps({
   symbol: String,
   x: Number,
@@ -9,7 +12,7 @@ const { symbol, x,y,z } = defineProps({
 });
 
 const atomInfo = computed(() => {
-  return window.atomInfos[symbol];
+  return atomInfos.value[symbol];
 });
 const position = computed(() => {
   return `${x} ${y} ${z}`

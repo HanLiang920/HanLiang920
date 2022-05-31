@@ -12,12 +12,12 @@
         },
         {
             "id": "3",
-            "symbol": "H",
+            "symbol": "",
             "cartCoords": "0.3368 0.0703 -0.7997"
         },
         {
             "id": "4",
-            "symbol": "H",
+            "symbol": "",
             "cartCoords": "0.3554 0.7056 0.6565"
         },
         {
@@ -31,8 +31,7 @@
             "id": "6",
             "bondAtom1": "1",
             "bondAtom2": "4",
-            "bondOrderType": "0",
-            "bondOrder": "1"
+            "isElectronPair":true
         },
         {
             "id": "7",
@@ -50,10 +49,9 @@
         },
         {
             "id": "9",
-            "bondAtom1": "3",
-            "bondAtom2": "1",
-            "bondOrderType": "0",
-            "bondOrder": "1"
+            "bondAtom1": "1",
+            "bondAtom2": "3",
+            "isElectronPair":true
         }
     ]
 }

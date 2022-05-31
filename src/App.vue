@@ -26,9 +26,10 @@
       <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
       <a-sky></a-sky>
     </template>
-    <fragment type="水" />
-    <a-entity geometry="primitive: box1;" position="0 0 -9"></a-entity>
-    <!-- <a-entity camera></a-entity> -->
+    <fragment type="水" position="0 0 -9"/>
+
+    
+    <a-entity camera></a-entity>
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
                    castShadow: true;

@@ -24,7 +24,9 @@ const position = computed(() => {
     :geometry="`primitive: sphere; radius: ${atomInfo.radius}`"
     :material="`color: ${atomInfo.color};roughness: 0.25; metalness: 0.2`"
     :position="position"
-  ></a-entity>
+  >
+  </a-entity>
+  
 </template>
 
 <style scoped>

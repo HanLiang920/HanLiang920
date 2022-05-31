@@ -16,7 +16,7 @@ AFRAME.registerGeometry('electronPair', {
         );
         const points = curve.getPoints( 50 );
 
-        this.geometry = new THREE.LatheGeometry(points.reverse());
+        this.geometry = new THREE.LatheGeometry(points,30);
     }
 });
 

@@ -24,7 +24,7 @@ function getRotation([x, y, z], [x1, y1, z1]) {
 
 <template>
   <a-entity :rotation="rotation" scale="0.6 0.6 0.6">
-    <a-entity position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2"></a-entity>
+    <a-entity position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
   </a-entity>
 </template>
 

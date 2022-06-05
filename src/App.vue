@@ -29,7 +29,7 @@
     <fragment type="水" position="0 0 -9"/>
 
     
-    <!-- <a-entity camera></a-entity> -->
+    <a-entity camera></a-entity>
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
                    castShadow: true;

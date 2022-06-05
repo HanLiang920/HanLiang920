@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
+import { getRotation } from '../utils'
 const { bondAtom1, bondAtom2} = defineProps({
     bondAtom1: Object,
     bondAtom2: Object
@@ -10,16 +11,7 @@ const rotation = computed(() => {
 
     return getRotation([x2, y2, z2], [x1, y1, z1])
 });
-function getRotation([x, y, z], [x1, y1, z1]) {
-    const length = Math.pow(Math.pow((x1 - x), 2) + Math.pow((y1 - y), 2) + Math.pow((z1 - z), 2), 0.5)
-    const roll = Math.asin((y1 - y) / length) * 180 / Math.PI + 90
-    const length2 = Math.pow(Math.pow((x1 - x), 2) + Math.pow((z1 - z), 2), 0.5)
-    let yaw = Math.asin((z - z1) / length2) * 180 / Math.PI
-    if (x >= x1) {
-        yaw = 180 - yaw
-    }
-    return `0 ${yaw} ${roll+180}`
-}
+
 </script>
 
 <template>

@@ -29,8 +29,8 @@
     "bond": [
         {
             "id": "6",
-            "bondAtom1": "1",
-            "bondAtom2": "4",
+            "bondAtom1": "4",
+            "bondAtom2": "1",
             "isElectronPair":true
         },
         {
@@ -49,8 +49,8 @@
         },
         {
             "id": "9",
-            "bondAtom1": "1",
-            "bondAtom2": "3",
+            "bondAtom1": "3",
+            "bondAtom2": "1",
             "isElectronPair":true
         }
     ]

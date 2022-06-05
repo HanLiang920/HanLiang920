@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
-import { useStore } from '../stores/index'
+import { useStore } from '../stores'
+import { getRotation } from '../utils'
 import { storeToRefs } from 'pinia'
 const store = useStore()
 const { atomInfos } = storeToRefs(store)
@@ -39,17 +40,6 @@ const bondInfo = computed(() => {
         rotation: getRotation([x, y, z], [x1, y1, z1])
     }
 });
-
-function getRotation([x, y, z], [x1, y1, z1]) {
-    const length = Math.pow(Math.pow((x1 - x), 2) + Math.pow((y1 - y), 2) + Math.pow((z1 - z), 2), 0.5)
-    const roll = Math.asin((y1 - y) / length) * 180 / Math.PI + 90
-    const length2 = Math.pow(Math.pow((x1 - x), 2) + Math.pow((z1 - z), 2), 0.5)
-    let yaw = Math.asin((z - z1) / length2) * 180 / Math.PI
-    if (x >= x1) {
-        yaw = 180 - yaw
-    }
-    return `0 ${yaw} ${roll}`
-}
 
 </script>
  

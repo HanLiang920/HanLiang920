@@ -1,3 +1,4 @@
+import 'normalize.css';
 import { createApp } from 'vue'
 import { createPinia, defineStore } from 'pinia'
 import { Drawer, Menu } from 'ant-design-vue';
@@ -25,5 +26,10 @@ const app = createApp(App);
 app.use(Drawer).use(Menu).use(createPinia())
 
 app.mount('.chem-3d')
+
+window.addEventListener('arjs-video-loaded', function () {
+    const main = document.getElementsByClassName('main')[0]
+    main.parentNode.removeChild( main)
+});
 
 

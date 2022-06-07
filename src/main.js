@@ -27,7 +27,7 @@ app.use(Drawer).use(Menu).use(createPinia())
 
 app.mount('.chem-3d')
 
-window.addEventListener('arjs-video-loaded', function () {
+window.addEventListener('camera-init', function () {
     const main = document.getElementsByClassName('main')[0]
     main.parentNode.removeChild( main)
 });

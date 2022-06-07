@@ -26,7 +26,6 @@
       <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
       <a-sky></a-sky>
     </template>
-    <fragment type="水" position="0 0 -9"/>
 
     
     <a-entity camera></a-entity>
@@ -71,6 +70,7 @@ const modelList = ref([
   { name: "乙烯" },
   { name: "乙炔" },
   { name: "苯" },
+  { name: "水" },
 ]);
 const currentModel = ref("");
 const openModel = (event) => {

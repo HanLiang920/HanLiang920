@@ -24,7 +24,7 @@ const isArray = computed(() => {
     <template v-for="bond in fragment.bond" :key="bond.id">
       <BaseBond v-if="!bond.isElectronPair" :bondAtom1="fragment.atom[bond.bondAtom1]"
         :bondAtom2="fragment.atom[bond.bondAtom2]" :bondOrderType="bond.bondOrderType" :bondOrder="bond.bondOrder" />
-      <BaseElectronPair v-else-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]"/>
+      <BaseElectronPair v-else-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
     </template>
     
   </a-entity>
@@ -37,7 +37,7 @@ const isArray = computed(() => {
       <template  v-for="bond in item.bond" :key="bond.id">
         <BaseBond v-if="!bond.isElectronPair" :bondAtom1="item.atom[bond.bondAtom1]"
           :bondAtom2="item.atom[bond.bondAtom2]" :bondOrderType="bond.bondOrderType" :bondOrder="bond.bondOrder" />
-        <BaseElectronPair v-else-if="bond.isElectronPair===true" :bondAtom1="item.atom[bond.bondAtom1]" :bondAtom2="item.atom[bond.bondAtom2]"/>
+        <BaseElectronPair v-else-if="bond.isElectronPair===true" :bondAtom1="item.atom[bond.bondAtom1]" :bondAtom2="item.atom[bond.bondAtom2]" :id="type+bond.id"/>
       </template>
 
     </a-entity>

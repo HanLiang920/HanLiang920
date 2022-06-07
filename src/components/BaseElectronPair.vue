@@ -1,9 +1,10 @@
 <script setup>
 import { ref, computed } from "vue";
 import { getRotation } from '../utils'
-const { bondAtom1, bondAtom2} = defineProps({
+const { bondAtom1, bondAtom2,id} = defineProps({
     bondAtom1: Object,
-    bondAtom2: Object
+    bondAtom2: Object,
+    id:String
 });
 const rotation = computed(() => {
     const { x: x1, y: y1, z: z1 } = bondAtom1
@@ -16,7 +17,7 @@ const rotation = computed(() => {
 
 <template>
   <a-entity :rotation="rotation" scale="0.6 0.6 0.6">
-    <a-entity position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
+    <a-entity :key="id" position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
   </a-entity>
 </template>
 

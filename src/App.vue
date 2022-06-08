@@ -8,7 +8,9 @@
     <modeChoose v-model:mode="mode"></modeChoose>
     <div style="width:14%;height:0"></div>
   </div>
-  <a-scene embedded fog="type: linear;" 
+  <a-scene embedded 
+            device-orientation-permission-ui="enabled: false"
+            fog="type: linear;" 
             renderer="antialias: true;
                    colorManagement: true;
                    sortObjects: true;

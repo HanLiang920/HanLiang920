@@ -21,7 +21,6 @@ AFRAME.registerGeometry('electronPair', {
     }
 });
 
-
 const app = createApp(App);
 app.use(Drawer).use(Menu).use(createPinia())
 
@@ -29,7 +28,7 @@ app.mount('.chem-3d')
 
 window.addEventListener('camera-init', function () {
     const main = document.getElementsByClassName('main')[0]
-    main.parentNode.removeChild( main)
+    main.parentNode.removeChild(main)
 });
 
 

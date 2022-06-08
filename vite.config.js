@@ -14,7 +14,7 @@ export default defineConfig({
       {
         template: {
           compilerOptions: {
-            isCustomElement: (tag) => ['a-scene', 'a-sky', 'a-entity', 'a-cylinder', 'a-camera','a-marker'].includes(tag)
+            isCustomElement: (tag) => ['a-scene', 'a-sky','a-entity', 'a-cylinder', 'a-camera','a-marker'].includes(tag)
           }
         }
       }

@@ -10,7 +10,6 @@
   </div>
   <a-scene embedded 
             device-orientation-permission-ui="enabled: false"
-            fog="type: linear;" 
             renderer="antialias: true;
                    colorManagement: true;
                    sortObjects: true;
@@ -26,7 +25,7 @@
     </template>
     <template v-else>
       <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
-      <a-sky></a-sky>
+     <a-sky color="#e8effb"></a-sky>
     </template>
 
     

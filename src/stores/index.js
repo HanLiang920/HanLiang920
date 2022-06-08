@@ -7,7 +7,7 @@ const atomInfos = {
     },
     H: {
         radius: 0.39,
-        color: "#cdcdcd",
+        color: "#fff",
     },
     O:{
         radius: 0.4,

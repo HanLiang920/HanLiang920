@@ -8,7 +8,8 @@
     <modeChoose v-model:mode="mode"></modeChoose>
     <div style="width:14%;height:0"></div>
   </div>
-  <a-scene embedded 
+  <a-scene  embedded 
+            cursor="rayOrigin: mouse; fuse: false;"
             device-orientation-permission-ui="enabled: false"
             renderer="antialias: true;
                    colorManagement: true;
@@ -28,8 +29,10 @@
      <a-sky color="#e8effb"></a-sky>
     </template>
 
-    
-    <a-entity camera></a-entity>
+    <a-box position="0 0.5 -3" color="#4CC3D9" entity-event></a-box>
+      <!-- <a-camera position="0 1.6 0">
+
+  </a-camera> -->
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
                    castShadow: true;

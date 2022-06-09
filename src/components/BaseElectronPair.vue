@@ -17,7 +17,7 @@ const rotation = computed(() => {
 
 <template>
   <a-entity :rotation="rotation" scale="0.6 0.6 0.6">
-    <a-entity :key="id" position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
+    <a-entity :key="id" position="0 -1.91 0" geometry="primitive: electron-pair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
   </a-entity>
 </template>
 

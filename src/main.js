@@ -4,7 +4,7 @@ import { createPinia, defineStore } from 'pinia'
 import { Drawer, Menu } from 'ant-design-vue';
 import App from './App.vue'
 
-AFRAME.registerGeometry('electronPair', {
+AFRAME.registerGeometry('electron-pair', {
     schema: {
     },
 
@@ -20,6 +20,18 @@ AFRAME.registerGeometry('electronPair', {
         this.geometry = new THREE.LatheGeometry(points,30);
     }
 });
+
+AFRAME.registerComponent('entity-event', {
+    init: function () {
+        let tmp = false
+        this.el.addEventListener("click", (e)=>{
+            let scale = tmp ? "1 1 1" : "2 2 2"
+            this.el.setAttribute("scale", scale)
+            tmp =!tmp
+           })
+        
+    },
+  });
 
 const app = createApp(App);
 app.use(Drawer).use(Menu).use(createPinia())

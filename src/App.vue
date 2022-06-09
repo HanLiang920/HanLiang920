@@ -24,12 +24,12 @@
       <BaseMarker id="1" type="乙烷" />
     </template>
     <template v-else>
-      <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
+      <fragment v-if="currentModel" :type="currentModel" :key="currentModel" />
      <a-sky color="#e8effb"></a-sky>
     </template>
 
     
-    <a-entity camera></a-entity>
+    <a-entity camera look-controls="enabled: false" orbit-controls="target: 0 1.6 -0.5; minDistance: 0.5; maxDistance: 180; initialPosition: 0 15 20"></a-entity>
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
                    castShadow: true;

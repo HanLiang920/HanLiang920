@@ -17,7 +17,7 @@ const isArray = computed(() => {
 </script>
 
 <template>
-  <a-entity v-if="!isArray" entity-event>
+  <a-entity v-if="!isArray" entity-event class="clickable">
     <template  v-for="atom in fragment.atom" :key="atom.id">
       <BaseAtom v-if="atom.symbol" v-bind="atom" />
     </template>
@@ -29,7 +29,7 @@ const isArray = computed(() => {
     
   </a-entity>
   <a-entity v-else>
-    <a-entity v-for="item in fragment" entity-event>
+    <a-entity v-for="item in fragment" entity-event class="clickable">
       <template v-for="atom in item.atom" :key="atom.id">
         <BaseAtom v-if="atom.symbol"  v-bind="atom" />
       </template>

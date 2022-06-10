@@ -9,7 +9,6 @@
     <div style="width:14%;height:0"></div>
   </div>
   <a-scene  embedded 
-            cursor="rayOrigin: mouse; fuse: false;"
             device-orientation-permission-ui="enabled: false"
             renderer="antialias: true;
                    colorManagement: true;
@@ -26,13 +25,12 @@
     </template>
     <template v-else>
       <fragment v-if="currentModel" :type="currentModel" :key="currentModel" position="0 0 -9" />
-     <a-sky color="#e8effb"></a-sky>
+       <a-sky color="#e8effb"></a-sky>
     </template>
 
-    <a-box position="0 0.5 -3" color="#4CC3D9" entity-event></a-box>
-      <!-- <a-camera position="0 1.6 0">
-
-  </a-camera> -->
+    <a-box position="0 0 -6" color="#4CC3D9" entity-event class="clickable"></a-box>
+    <a-entity camera></a-entity>
+    <a-entity cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable"></a-entity>
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
                    castShadow: true;

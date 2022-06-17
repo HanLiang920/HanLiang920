@@ -2,10 +2,8 @@
   <div class="chem-3d-header">
     <modeChoose v-model:mode="mode"></modeChoose>
   </div>
-  <iframe src="./ar.html"
-          style="border:none;width: 100%;height: 100%;"></iframe>
-  <iframe src="./model.html"
-          style="border:none;width: 100%;height: 100%;"></iframe>
+  <iframe v-show="mode === 'AR'" src="./ar.html" style="border:none;width: 100%;height: 100%;"></iframe>
+  <iframe v-show="mode === '模型'" src="./model.html" style="border:none;width: 100%;height: 100%;"></iframe>
 </template>
 
 <script setup>
@@ -29,6 +27,7 @@ const mode = ref("AR");
   right: 0;
   left: 0;
 }
+
 .chem-3d-header {
   position: absolute;
   top: 10px;
@@ -43,7 +42,7 @@ const mode = ref("AR");
   align-items: center;
   padding: 0 10px;
 
-  & > div {
+  &>div {
     height: 100%;
     background: #868686;
     opacity: 0.8;

@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import modeChoose from "../../components/modeChoose.vue";
+import BaseMarker from "../../components/BaseMarker.vue";
 </script>
 
 <style lang="scss">
@@ -34,6 +34,10 @@ import modeChoose from "../../components/modeChoose.vue";
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji", sans-serif;
+}
+
+body{
+  overflow: hidden;
 }
 
 #app {

@@ -1,0 +1,83 @@
+{
+  "atom": [
+    {
+      "id": "5",
+      "atType": "C Alkene",
+      "symbol": "C",
+      "userNum": "1",
+      "cartCoords": "-0.578938 -0.33425 1.2326e-32"
+    },
+    {
+      "id": "6",
+      "atType": "C Alkene",
+      "symbol": "C",
+      "userNum": "2",
+      "cartCoords": "0.578938 0.33425 1.2326e-32"
+    },
+    {
+      "id": "7",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "3",
+      "cartCoords": "-0.578938 -1.43425 -1.59365e-16"
+    },
+    {
+      "id": "8",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "4",
+      "cartCoords": "-1.53157 0.21575 1.59365e-16"
+    },
+    {
+      "id": "9",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "5",
+      "cartCoords": "0.578938 1.43425 -5.21609e-17"
+    },
+    {
+      "id": "10",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "6",
+      "cartCoords": "1.53157 -0.21575 5.21609e-17"
+    }
+  ],
+  "bond": [
+    {
+      "id": "11",
+      "bondAtom1": "5",
+      "bondAtom2": "6",
+      "bondOrderType": "13",
+      "bondOrder": "2"
+    },
+    {
+      "id": "12",
+      "bondAtom1": "5",
+      "bondAtom2": "7",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "13",
+      "bondAtom1": "5",
+      "bondAtom2": "8",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "14",
+      "bondAtom1": "6",
+      "bondAtom2": "9",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "15",
+      "bondAtom1": "6",
+      "bondAtom2": "10",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    }
+  ]
+}

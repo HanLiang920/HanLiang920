@@ -1,0 +1,58 @@
+{
+  "atom": [
+    {
+      "id": "5",
+      "atType": "C Alkyne",
+      "symbol": "C",
+      "userNum": "1",
+      "cartCoords": "-0.524811 -0.303 0"
+    },
+    {
+      "id": "6",
+      "atType": "C Alkyne",
+      "symbol": "C",
+      "userNum": "2",
+      "cartCoords": "0.524811 0.303 0"
+    },
+    {
+      "id": "7",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "3",
+      "cartCoords": "-1.46878 -0.848 0"
+    },
+    {
+      "id": "8",
+      "atType": "H",
+      "symbol": "H",
+      "userNum": "4",
+      "cartCoords": "1.46878 0.848 0"
+    }
+  ],
+  "bond": [
+    {
+      "id": "9",
+      "bondAtom1": "5",
+      "bondAtom2": "6",
+      "bondOrderType": "14",
+      "bondOrder": "3"
+    },
+    {
+      "id": "10",
+      "bondAtom1": "5",
+      "bondAtom2": "7",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "11",
+      "bondAtom1": "6",
+      "bondAtom2": "8",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    }
+  ],
+  "id": "4",
+  "groupName": "Fragment",
+  "groupID": "1"
+}

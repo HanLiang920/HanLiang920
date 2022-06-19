@@ -8,11 +8,11 @@
                    maxCanvasHeight: -1;" vr-mode-ui="enabled: false">
 
 
-      <!-- <fragment v-if="currentModel" :type="currentModel" :key="currentModel" /> -->
-      <fragment type="甲烷"  position="0 0 -9"/>
-      <a-sky color="#e8effb"></a-sky>
+    <!-- <fragment v-if="currentModel" :type="currentModel" :key="currentModel" /> -->
+    <fragment type="苯"  />
 
-    <a-entity camera ></a-entity>
+    <a-entity camera look-controls="enabled: false" arcball-controls="target: 0 0 -0.5; initialPosition: 0 0 5"></a-entity>
+
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
                    castShadow: true;

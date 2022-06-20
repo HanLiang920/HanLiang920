@@ -41,3 +41,11 @@ AFRAME.registerGeometry('electronPair', {
         this.geometry = new THREE.LatheGeometry(points, 30);
     }
 });
+
+AFRAME.registerComponent('shadow-material', {
+    init() {
+        this.material = new THREE.ShadowMaterial();
+        this.el.getOrCreateObject3D('mesh').material = this.material;
+        this.material.opacity = 0.2;
+    }
+  });

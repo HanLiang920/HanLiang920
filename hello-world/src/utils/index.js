@@ -170,13 +170,21 @@ export function xml2json(xml, tab='') {
 }
 
 export function getc3Data(data) {
-    const atom = {}
-    data.atom.forEach(it => {
-        const { id, symbol, cartCoords } = it
-        const [x, y, z] = cartCoords.split(" ").map(it => Number(it))
-        atom[id] = { symbol, x, y, z }
-    });
-    return { atom, bond: data.bond }
+   const atom = {}
+   let minY = 0
+   data.atom.forEach(it => {
+      const { id, symbol, cartCoords } = it
+      const [x, y, z] = cartCoords.split(" ").map(it => Number(it))
+      if (symbol) {
+         const min = y - window.atomInfos[symbol].radius
+         if (min < minY) minY = min
+      }
+      atom[id] = { symbol, x, y, z }
+   });
+   Object.values(atom).forEach(it => {
+      it.y = it.y - minY
+   })
+   return { atom, bond: data.bond }
 }
 
 export function getRotation([x, y, z], [x1, y1, z1]) {

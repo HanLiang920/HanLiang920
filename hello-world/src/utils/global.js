@@ -52,6 +52,9 @@ AFRAME.registerComponent('shadow-material', {
 
 AFRAME.registerComponent('use-rotate', {
     init() {
-        console.log(this.$el);
+        window.objectControls.setObjectToMove(this.el.object3D)
+        console.log(this,this.el.object3D);
+    },
+    play(){
     }
 });

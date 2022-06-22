@@ -7,21 +7,22 @@ const { id, type } = defineProps({
   type: String,
 });
 const el = ref()
+const isShow = ref(false);
 onMounted(() => {
   const marker = el.value
   marker.addEventListener('markerFound', (e) => {
-    //store.addMarker(id,e)
+    isShow = true
   });
 
   marker.addEventListener('markerLost', () => {
-   // store.removeMarker(id)
+   isShow = false
   })
 })
 </script>
 
 <template>
     <a-marker ref="el" type="barcode" :value="id" smooth="true">
-        <fragment :type="type" />
+        <fragment v-if="isShow" :type="type" />
     </a-marker>
 </template>
 

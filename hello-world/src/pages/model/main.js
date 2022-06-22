@@ -78,6 +78,7 @@ AFRAME.registerComponent('object-controls', {
     controls.setMaxVerticalRotationAngle(Math.PI / 4, Math.PI / 4);
     controls.setRotationSpeed(0.05);
     this.controls = controls
+    window.objectControls = controls
     this.update();
   },
 

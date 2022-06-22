@@ -11,5 +11,17 @@ module.exports = defineConfig({
     index: 'src/pages/index/main.js',
     ar: 'src/pages/ar/main.js',
     model: 'src/pages/model/main.js'
+  },
+  chainWebpack: config => {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+        options.compilerOptions = {
+          isCustomElement: (tag) => ['a-scene', 'a-sky','a-entity', 'a-cylinder', 'a-camera','a-marker','a-plane'].includes(tag)
+        };
+        return options;
+      });
   }
 })

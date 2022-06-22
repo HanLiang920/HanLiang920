@@ -18,12 +18,12 @@ const c3Data = {}
 const requireAll = context => context.keys().map(context);
 const allJson = require.context('../c3Data', false, /.json/);
 const paths = allJson.keys()
-requireAll(allJson).forEach((data,i) => {
+requireAll(allJson).forEach((data, i) => {
     const name = paths[i].split('/').pop().replace('.json', '')
     c3Data[name] = getc3Data(data)
 });
 
-window.c3Data = c3Data 
+window.c3Data = c3Data
 
 AFRAME.registerGeometry('electronPair', {
     schema: {
@@ -48,4 +48,10 @@ AFRAME.registerComponent('shadow-material', {
         this.el.getOrCreateObject3D('mesh').material = this.material;
         this.material.opacity = 0.2;
     }
-  });
+});
+
+AFRAME.registerComponent('use-rotate', {
+    init() {
+        console.log(this.$el);
+    }
+});

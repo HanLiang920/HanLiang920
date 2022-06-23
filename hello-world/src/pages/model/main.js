@@ -98,6 +98,6 @@ AFRAME.registerComponent('object-controls', {
 
   remove: function () {
     this.controls.reset();
-    this.controls.dispose();
+    this.controls.dispose&&this.controls.dispose();
   }
 });

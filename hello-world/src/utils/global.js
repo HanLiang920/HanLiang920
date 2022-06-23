@@ -42,6 +42,20 @@ AFRAME.registerGeometry('electronPair', {
     }
 });
 
+AFRAME.registerComponent("axes-helper", {
+    schema: {
+        size: {
+            type: "number",
+	        default: 1
+        }
+    },
+    init: function () {
+        var data = this.data;
+        this.axes = new THREE.AxesHelper(data.size);
+        this.el.setObject3D("axes-helper", this.axes);
+    }
+});
+
 AFRAME.registerComponent('shadow-material', {
     init() {
         this.material = new THREE.ShadowMaterial();
@@ -49,6 +63,7 @@ AFRAME.registerComponent('shadow-material', {
         this.material.opacity = 0.2;
     }
 });
+
 
 AFRAME.registerComponent('use-rotate', {
     init() {

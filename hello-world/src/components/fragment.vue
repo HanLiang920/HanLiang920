@@ -12,7 +12,8 @@ const fragment = reactive(window.c3Data[type]);
 </script>
 
 <template>
-  <a-entity shadow use-rotate>
+<a-entity use-rotate>
+  <a-entity shadow  :position="fragment.center">
     <template  v-for="atom in fragment.atom" :key="atom.id">
       <BaseAtom v-if="atom.symbol" v-bind="atom" />
     </template>
@@ -22,6 +23,8 @@ const fragment = reactive(window.c3Data[type]);
       <BaseElectronPair v-else-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
     </template>
   </a-entity>
+  <a-entity axes-helper="size:2"></a-entity>
+</a-entity>
 </template>
 
 <style scoped>

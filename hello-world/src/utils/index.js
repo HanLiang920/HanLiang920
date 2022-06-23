@@ -1,20 +1,12 @@
 
 export function getc3Data(data) {
    const atom = {}
-   let minY = 0
    data.atom.forEach(it => {
       const { id, symbol, cartCoords } = it
-      const [x, y, z] = cartCoords.split(" ").map(it => Number(it))
-      if (symbol) {
-         const min = y - window.atomInfos[symbol].radius
-         if (min < minY) minY = min
-      }
+      const { x, y, z } = AFRAME.utils.coordinates.parse(cartCoords)
       atom[id] = { symbol, x, y, z }
    });
-   Object.values(atom).forEach(it => {
-      it.y = it.y - minY
-   })
-   return { atom, bond: data.bond }
+   return { atom, bond: data.bond, center: data.center }
 }
 
 export function getRotation([x, y, z], [x1, y1, z1]) {

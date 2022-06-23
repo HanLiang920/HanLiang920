@@ -9,9 +9,9 @@
 
 
     <!-- <fragment v-if="currentModel" :type="currentModel" :key="currentModel" /> -->
-    <fragment type="甲烷"/>
+    <fragment type="水" position="0 1 0"/>
     <a-plane shadow-material  height="100" width="100" rotation="-90 0 0" shadow="cast:false;receive: true;"></a-plane>
-    <a-entity camera look-controls="enabled: false" object-controls="target: 0 0.6 -0.5; initialPosition: 0 1.6 7"></a-entity>
+    <a-entity camera look-controls="enabled: false" object-controls="target: 0 0.6 -0.5; initialPosition: 0 1.6 5"></a-entity>
 
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;

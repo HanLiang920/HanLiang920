@@ -14,7 +14,7 @@
                 type="甲烷" />
     <BaseMarker id="1"
                 type="乙烷" />
-    <a-entity camera></a-entity>
+    <a-entity camera look-controls="enabled: false" object-controls="target: 0 0 0; initialPosition: 0 0 0"></a-entity>
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
                    castShadow: true;

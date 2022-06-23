@@ -1,0 +1,90 @@
+<template>
+  <div class="menu" @click="visible = true">
+    <menu-outlined />
+  </div>
+  <a-drawer v-model:visible="visible" title="" placement="left" width="60%">
+    <a-menu v-model:selectedKeys="currentModel" mode="inline">
+            <a-menu-item v-for="it in modelList" :key="it.name" @click="visible = false">
+          {{ it.name }}
+        </a-menu-item>
+
+    </a-menu>
+  </a-drawer>
+  <a-scene embedded device-orientation-permission-ui="enabled: false" renderer="antialias: true;
+                   colorManagement: true;
+                   sortObjects: true;
+                   physicallyCorrectLights: true;
+                   logarithmicDepthBuffer: true;
+                   maxCanvasWidth: -1;
+                   maxCanvasHeight: -1;" vr-mode-ui="enabled: false">
+
+
+    <fragment v-if="currentModel[0]" :type="currentModel[0]" :key="currentModel[0]"  position="0 1 0"/>
+    <a-plane shadow-material height="100" width="100" rotation="-90 0 0" shadow="cast:false;receive: true;"></a-plane>
+    <a-entity camera look-controls="enabled: false" object-controls="target: 0 0.6 -0.5; initialPosition: 0 1.6 5">
+    </a-entity>
+
+    <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
+    <a-entity light="type: directional;
+                   castShadow: true;
+                   intensity: 1.6;" position="-5 8 1.5"></a-entity>
+
+  </a-scene>
+</template>
+
+<script setup>
+import { MenuOutlined } from "@ant-design/icons-vue";
+import fragment from "../../components/fragment.vue";
+import { ref } from "vue";
+const visible = ref(false);
+const currentModel = ref(["水"]);
+const modelList = ref([
+  { name: "甲烷" },
+  { name: "乙烷" },
+  { name: "丙烷" },
+  { name: "乙烯" },
+  { name: "乙炔" },
+  { name: "苯" },
+  { name: "水" },
+]);
+</script>
+
+<style lang="scss">
+* {
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji", sans-serif;
+}
+
+#app {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 14%;
+  cursor: pointer;
+  z-index: 5;
+  height: 6vh;
+  font-size: 16px;
+  background: #868686;
+  opacity: .8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 4vw;
+}
+.ant-drawer-body{
+  padding: 24px 0px;
+
+}
+</style>
+

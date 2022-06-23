@@ -15,7 +15,7 @@ defineEmits(['update:mode'])
 
 <style scoped lang="scss">
 .mode-choose {
-    width: 45%;
+    width: 100%;
     display: flex;
     font-size: 14px;
 

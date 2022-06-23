@@ -1,30 +1,28 @@
 <script setup>
 import fragment from './fragment.vue'
 import { ref, onMounted  } from "vue";
-import { useStore } from '../stores/index'
-import { storeToRefs } from 'pinia'
-const store = useStore()
-const { globalMarker } = storeToRefs(store)
+
 const { id, type } = defineProps({
   id: String,
   type: String,
 });
 const el = ref()
+const isShow = ref(false);
 onMounted(() => {
   const marker = el.value
   marker.addEventListener('markerFound', (e) => {
-    store.addMarker(id,e)
+    isShow.value = true
   });
 
   marker.addEventListener('markerLost', () => {
-    store.removeMarker(id)
+   isShow.value = false
   })
 })
 </script>
 
 <template>
     <a-marker ref="el" type="barcode" :value="id" smooth="true">
-        <fragment :type="type" />
+        <fragment v-if="isShow" :type="type" :showAxes="false"/>
     </a-marker>
 </template>
 

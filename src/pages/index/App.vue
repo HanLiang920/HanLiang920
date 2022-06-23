@@ -29,10 +29,10 @@ const mode = ref("AR");
 }
 
 .chem-3d-header {
-  position: absolute;
+  position: fixed;
   top: 10px;
-  right: 0;
-  left: 0;
+  width: 45%;
+  left: 27.5%;
   height: 6vh;
   color: #e3e3e3;
   font-size: 16px;

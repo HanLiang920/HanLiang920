@@ -1,6 +1,4 @@
 <template>
-{{parentWindow.currentModel}}
-{{books1}}
   <a-scene embedded device-orientation-permission-ui="enabled: false" renderer="antialias: true;
                    colorManagement: true;
                    sortObjects: true;
@@ -10,7 +8,7 @@
                    maxCanvasHeight: -1;" vr-mode-ui="enabled: false">
 
 
-    <!-- <fragment v-if="books1[0]" :type="books1[0]" :key="books1[0]"  position="0 1 0"/> -->
+    <fragment v-if="currentModel[0]" :type="currentModel[0]" :key="currentModel[0]"  position="0 1 0"/>
     <a-plane shadow-material height="100" width="100" rotation="-90 0 0" shadow="cast:false;receive: true;"></a-plane>
     <a-entity camera look-controls="enabled: false" object-controls="target: 0 0.6 -0.5; initialPosition: 0 1.6 5">
     </a-entity>
@@ -26,14 +24,14 @@
 <script setup>
 import fragment from "../../components/fragment.vue";
 import {ref ,reactive,watch ,watchEffect } from "vue";
-const currentModel = ref(parent.window.currentModel)
-const books = reactive([parent.window.currentModel])
-const books1 = parent.window.currentModel
-console.log(currentModel,books,books1);
-watch(currentModel,()=>{
-  alert(123)
-})
-top.watchEffect(() => console.log(parent.window.currentModel.value[0]))
+const currentModel = ref([])
+// const books = reactive([parent.window.currentModel])
+// const books1 = parent.window.currentModel
+// console.log(currentModel,books,books1);
+// watch(currentModel,()=>{
+//   alert(123)
+// })
+top.watchEffect(() => currentModel.value = parent.window.currentModel.value)
 </script>
 
 <style lang="scss">

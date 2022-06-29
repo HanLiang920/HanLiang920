@@ -1,14 +1,14 @@
 <template>
   <a-scene embedded
            device-orientation-permission-ui="enabled: false"
-           renderer="antialias: true;
+           :renderer="`antialias: true;
                    colorManagement: true;
                    sortObjects: true;
                    physicallyCorrectLights: true;
                    logarithmicDepthBuffer: true;
-                   maxCanvasWidth: -1;
-                   maxCanvasHeight: -1;"
-           arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;"
+                   maxCanvasWidth: ${width};
+                   maxCanvasHeight: ${height};`"
+           :arjs="`sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;canvasWidth: ${width};canvasHeight: ${height};`"
            vr-mode-ui="enabled: false">
     <BaseMarker id="0"
                 type="甲烷" />
@@ -25,7 +25,10 @@
 </template>
 
 <script setup>
+import {ref} from "vue";
 import BaseMarker from "../../components/BaseMarker.vue";
+const width = ref(window.innerWidth);
+const height = ref(window.innerHeight);
 </script>
 
 <style lang="scss">

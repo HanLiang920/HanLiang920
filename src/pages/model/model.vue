@@ -42,7 +42,6 @@ top.watchEffect(() => currentModel.value = parent.window.currentModel.value)
 }
 
 #app {
-  overflow: hidden;
   position: absolute;
   top: 0;
   bottom: 0;

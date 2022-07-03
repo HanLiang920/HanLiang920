@@ -8,7 +8,7 @@
                    logarithmicDepthBuffer: true;
                    maxCanvasWidth: ${width};
                    maxCanvasHeight: ${height};`"
-           :arjs="`sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;`"
+           :arjs="`sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;sourceWidth:${width}; sourceHeight:${height}; displayWidth: ${width}; displayHeight: ${height};`"
            vr-mode-ui="enabled: false">
     <BaseMarker id="0"
                 type="甲烷" />

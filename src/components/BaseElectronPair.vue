@@ -13,10 +13,15 @@ const rotation = computed(() => {
     return getRotation([x2, y2, z2], [x1, y1, z1])
 });
 
+const position = computed(() => {
+    const { x, y, z } = bondAtom2
+    return `${x} ${y} ${z}`
+});
+
 </script>
 
 <template>
-  <a-entity :rotation="rotation" scale="0.6 0.6 0.6">
+  <a-entity :position="position" :rotation="rotation" scale="0.6 0.6 0.6">
     <a-entity :key="id" position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
   </a-entity>
 </template>

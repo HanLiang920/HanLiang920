@@ -13,9 +13,21 @@ window.atomInfos = {
         radius: 0.39,
         color: "#fff",
     },
+    B: {
+        radius: 0.43,
+        color: "black",
+    },
+    F: {
+        radius: 0.39,
+        color: "#fff",
+    },
     O: {
         radius: 0.4,
         color: "red",
+    },
+    N: {
+        radius: 0.4,
+        color: "#1d0ff9",
     }
 }
 

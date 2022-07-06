@@ -10,10 +10,16 @@
   </div>
   <a-drawer v-model:visible="visible" title="" placement="left" width="60%">
     <a-menu v-model:selectedKeys="currentModel" mode="inline">
-            <a-menu-item v-for="it in modelList" :key="it.name" @click="visible = false">
-          {{ it.name }}
-        </a-menu-item>
-
+        <a-sub-menu key="VSEPR">
+          <template #title>VSEPR</template>
+          <a-menu-item v-for="it in VSEPRList" :key="it.name" @click="visible = false">{{ it.name }}</a-menu-item>
+        </a-sub-menu>
+        <a-sub-menu key="分子">
+          <template #title>分子</template>
+          <a-menu-item v-for="it in modelList" :key="it.name" @click="visible = false">
+            {{ it.name }}
+          </a-menu-item>
+        </a-sub-menu>
     </a-menu>
   </a-drawer>
   <iframe v-show="mode === 'AR'" src="./ar.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
@@ -26,15 +32,22 @@ import modeChoose from "../../components/modeChoose.vue";
 import { ref } from "vue";
 const mode = ref("AR");
 const visible = ref(false);
-const currentModel = ref(["水"]);
+const currentModel = ref(["2+1"]);
+const VSEPRList = ref([
+  { name: "4+0" },
+  { name: "3+1" },
+  { name: "2+2" },
+  { name: "3+0" },
+  { name: "2+1" },
+  { name: "2" }
+]);
 const modelList = ref([
   { name: "甲烷" },
   { name: "乙烷" },
   { name: "丙烷" },
   { name: "乙烯" },
   { name: "乙炔" },
-  { name: "苯" },
-  { name: "水" },
+  { name: "苯" }
 ]);
 window.currentModel = currentModel
 </script>

@@ -6,9 +6,9 @@
                    sortObjects: true;
                    physicallyCorrectLights: true;
                    logarithmicDepthBuffer: true;
-                   maxCanvasWidth: ${width};
-                   maxCanvasHeight: ${height};`"
-           :arjs="`sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;sourceWidth:${width}; sourceHeight:${height}; displayWidth: ${width}; displayHeight: ${height};`"
+                   maxCanvasWidth: -1;
+                   maxCanvasHeight: -1 ;`"
+           :arjs="`sourceType: webcam;sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;cameraParametersUrl:./data/camera_para.dat`"
            vr-mode-ui="enabled: false">
     <BaseMarker id="0"
                 type="甲烷" />
@@ -27,8 +27,15 @@
 <script setup>
 import {ref} from "vue";
 import BaseMarker from "../../components/BaseMarker.vue";
-const width = ref(window.innerWidth);
-const height = ref(window.innerHeight);
+// const width = ref(480);
+// const height = ref(640);
+// const width1 = ref(window.innerWidth);
+// const height1 = ref(window.innerHeight);
+// if(window.orientation===0){
+// width.value = 633
+// height.value = 844
+// }
+
 </script>
 
 <style lang="scss">

@@ -1,0 +1,36 @@
+{
+    "atom": [
+        {
+            "id": "1",
+            "symbol": "type1",
+            "cartCoords": "0 0 0"
+        },
+        {
+            "id": "2",
+            "symbol": "type2",
+            "cartCoords": "1.1855 0.0956 0"
+        },
+        {
+            "id": "3",
+            "symbol": "type2",
+            "cartCoords": "-1.1855 -0.0955 0"
+        }
+    ],
+    "bond": [
+        {
+            "id": "3",
+            "bondAtom1": "1",
+            "bondAtom2": "2",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": "4",
+            "bondAtom1": "1",
+            "bondAtom2": "3",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        }
+    ],
+    "center":"0 0 0"
+}

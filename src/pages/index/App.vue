@@ -40,7 +40,7 @@ const VSEPRList = ref([
   { name: "2+2" },
   { name: "3+0" },
   { name: "2+1" },
-  { name: "2" }
+  { name: "2+0" }
 ]);
 const modelList = ref([
   { name: "甲烷" },

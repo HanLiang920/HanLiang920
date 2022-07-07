@@ -2,12 +2,12 @@
     "atom": [
         {
             "id": "1",
-            "symbol": "O",
+            "symbol": "type1",
             "cartCoords": "0.0370 -0.0253 0.1252"
         },
         {
             "id": "2",
-            "symbol": "H",
+            "symbol": "type2",
             "cartCoords": "0.3478 -0.8749 0.4940"
         },
         {
@@ -22,7 +22,7 @@
         },
         {
             "id": "5",
-            "symbol": "H",
+            "symbol": "type2",
             "cartCoords": "-0.9181 0.0304 0.1740"
         }
     ],

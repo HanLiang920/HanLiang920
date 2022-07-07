@@ -85,9 +85,9 @@ const bondInfo = computed(() => {
             </a-entity>
         </template>
         <template v-else>
-            <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+            <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.06" position="0 -0.05 0">
             </a-cylinder>
-            <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+            <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.06" position="0 0.05 0">
             </a-cylinder>
         </template>
     </a-entity>

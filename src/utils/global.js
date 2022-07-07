@@ -5,6 +5,14 @@ import { ObjectControls } from './ObjectControls.js';
 window.showObject = {}
 
 window.atomInfos = {
+    type1: {
+        radius: 0.4,
+        color: "red",
+    },
+    type2: {
+        radius: 0.39,
+        color: "#fff",
+    },
     C: {
         radius: 0.43,
         color: "black",

@@ -1,0 +1,48 @@
+{
+  "atom": [
+    {
+      "id": "1",
+      "symbol": "type1",
+      "cartCoords": "0.0560 0.4615 0"
+    },
+    {
+      "id": "2",
+      "symbol": "type2",
+      "cartCoords": "-1.1624 1.3704 0"
+    },
+    {
+      "id": "3",
+      "symbol": "type2",
+      "cartCoords": "1.4523 1.0622 0"
+    },
+    {
+      "id": "4",
+      "symbol": "type2",
+      "cartCoords": "-0.1220 -1.0480 0"
+    }
+  ],
+  "bond": [
+    {
+      "id": "5",
+      "bondAtom1": "1",
+      "bondAtom2": "2",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "6",
+      "bondAtom1": "1",
+      "bondAtom2": "3",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": "7",
+      "bondAtom1": "1",
+      "bondAtom2": "4",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    }
+  ],
+  "center":"-0.0560 -0.4615 0"
+}

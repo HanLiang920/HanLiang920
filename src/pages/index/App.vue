@@ -9,14 +9,14 @@
     <div style="width:14%;height:0"></div>
   </div>
   <a-drawer v-model:visible="visible" title="" placement="left" width="60%">
-    <a-menu v-model:selectedKeys="currentModel" mode="inline">
+    <a-menu v-model:selectedKeys="currentModel" v-model:openKeys="openKeys" mode="inline" @click="visible = false">
         <a-sub-menu key="VSEPR">
           <template #title>VSEPR</template>
-          <a-menu-item v-for="it in VSEPRList" :key="it.name" @click="visible = false">{{ it.name }}</a-menu-item>
+          <a-menu-item v-for="it in VSEPRList" :key="it.name">{{ it.name }}</a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="分子">
           <template #title>分子</template>
-          <a-menu-item v-for="it in modelList" :key="it.name" @click="visible = false">
+          <a-menu-item v-for="it in modelList" :key="it.name">
             {{ it.name }}
           </a-menu-item>
         </a-sub-menu>
@@ -33,6 +33,7 @@ import { ref } from "vue";
 const mode = ref("AR");
 const visible = ref(false);
 const currentModel = ref(["2+1"]);
+const openKeys = ref(['VSEPR']);
 const VSEPRList = ref([
   { name: "4+0" },
   { name: "3+1" },

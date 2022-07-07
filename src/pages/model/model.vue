@@ -47,6 +47,7 @@ top.watchEffect(() => currentModel.value = parent.window.currentModel.value)
   bottom: 0;
   right: 0;
   left: 0;
+  background: linear-gradient(200deg, #f4efef, #e3eeff);
 }
 
 </style>

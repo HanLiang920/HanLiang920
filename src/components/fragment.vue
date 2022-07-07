@@ -13,7 +13,7 @@ const fragment = reactive(window.c3Data[type]);
 </script>
 
 <template>
-<a-entity use-rotate>
+<a-entity use-rotate v-if="fragment">
   <a-entity shadow  :position="fragment.center">
     <template  v-for="atom in fragment.atom" :key="atom.id">
       <BaseAtom v-if="atom.symbol" v-bind="atom" />

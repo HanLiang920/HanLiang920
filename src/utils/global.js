@@ -15,7 +15,7 @@ window.atomInfos = {
     },
     C: {
         radius: 0.43,
-        color: "#575555",
+        color: "black",
     },
     H: {
         radius: 0.39,

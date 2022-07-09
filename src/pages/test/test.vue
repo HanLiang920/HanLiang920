@@ -9,15 +9,13 @@
                    maxCanvasWidth: -1;
                    maxCanvasHeight: -1;"
            vr-mode-ui="enabled: false"> 
-    <fragment type="甲烷"   position="0 1 0"/>
+    <fragment type="px"   position="0 1 0"/>
   </a-scene>
 
 </template>
 
 <script setup>
 import fragment from "../../components/fragment.vue";
-import { ref } from "vue";
-const currentModel = ref(["2+1"]);
 </script>
 
 <style lang="scss">

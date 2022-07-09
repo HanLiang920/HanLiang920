@@ -1,0 +1,34 @@
+{
+    "atom": [
+        {
+            "id": "1",
+            "symbol": "",
+            "cartCoords": "0 0 0"
+        },
+        {
+            "id": "2",
+            "symbol": "",
+            "cartCoords": "0 0 2"
+        },
+        {
+            "id": "3",
+            "symbol": "",
+            "cartCoords": "0 0 -2"
+        }
+    ],
+    "bond": [
+        {
+            "id": "4",
+            "bondAtom1": "2",
+            "bondAtom2": "1",
+            "isElectronPair":true
+        },
+        {
+            "id": "5",
+            "bondAtom1": "3",
+            "bondAtom2": "1",
+            "isElectronPair":true
+        }
+    ],
+    "center":"0 0 0"
+}

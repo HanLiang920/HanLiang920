@@ -8,11 +8,12 @@ import { getRotation } from '../utils'
 // bondOrderType 15 C=C/C-C 苯环
 
 
-const { bondAtom1, bondAtom2, bondOrderType, bondOrder } = defineProps({
+const { bondAtom1, bondAtom2, bondOrderType, bondOrder, color } = defineProps({
     bondAtom1: Object,
     bondAtom2: Object,
     bondOrderType: String,
     bondOrder: String,
+    color: String,
 });
 const bondAtom1Info = computed(() => {
     return window.atomInfos[bondAtom1.symbol]
@@ -85,9 +86,9 @@ const bondInfo = computed(() => {
             </a-entity>
         </template>
         <template v-else>
-            <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.06" position="0 -0.05 0">
+            <a-cylinder :color="color || bondAtom1Info.color" height="0.1" radius="0.1" position="0 -0.05 0">
             </a-cylinder>
-            <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.06" position="0 0.05 0">
+            <a-cylinder :color="color || bondAtom2Info.color" height="0.1" radius="0.1" position="0 0.05 0">
             </a-cylinder>
         </template>
     </a-entity>

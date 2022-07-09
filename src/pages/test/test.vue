@@ -8,9 +8,10 @@
                    logarithmicDepthBuffer: true;
                    maxCanvasWidth: -1;
                    maxCanvasHeight: -1;"
-           vr-mode-ui="enabled: false">
-<a-box color="tomato" depth="2" height="4" width="0.5"></a-box>
+           vr-mode-ui="enabled: false"> 
+    <fragment type="甲烷"   position="0 1 0"/>
   </a-scene>
+
 </template>
 
 <script setup>

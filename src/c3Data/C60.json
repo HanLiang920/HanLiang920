@@ -1,0 +1,1026 @@
+{
+    "atom": [
+        {
+            "id": 1,
+            "symbol": "C",
+            "cartCoords": "3.2742 -1.4297 -0.0620"
+        },
+        {
+            "id": 2,
+            "symbol": "C",
+            "cartCoords": "3.5714 -0.0192 -0.0850"
+        },
+        {
+            "id": 3,
+            "symbol": "C",
+            "cartCoords": "3.3119 0.7909 1.0789"
+        },
+        {
+            "id": 4,
+            "symbol": "C",
+            "cartCoords": "2.7182 -2.0292 1.1233"
+        },
+        {
+            "id": 5,
+            "symbol": "C",
+            "cartCoords": "2.7702 -1.7990 -1.3612"
+        },
+        {
+            "id": 6,
+            "symbol": "C",
+            "cartCoords": "3.2507 0.4831 -1.3992"
+        },
+        {
+            "id": 7,
+            "symbol": "C",
+            "cartCoords": "2.7332 2.1042 0.9300"
+        },
+        {
+            "id": 8,
+            "symbol": "C",
+            "cartCoords": "2.7559 0.1913 2.2642"
+        },
+        {
+            "id": 9,
+            "symbol": "C",
+            "cartCoords": "1.6574 -2.9989 1.0111"
+        },
+        {
+            "id": 10,
+            "symbol": "C",
+            "cartCoords": "2.4586 -1.2192 2.2872"
+        },
+        {
+            "id": 11,
+            "symbol": "C",
+            "cartCoords": "1.7093 -2.7687 -1.4734"
+        },
+        {
+            "id": 12,
+            "symbol": "C",
+            "cartCoords": "2.7559 -0.6159 -2.1872"
+        },
+        {
+            "id": 13,
+            "symbol": "C",
+            "cartCoords": "2.6725 1.7952 -1.5485"
+        },
+        {
+            "id": 14,
+            "symbol": "C",
+            "cartCoords": "1.8190 2.3154 2.0245"
+        },
+        {
+            "id": 15,
+            "symbol": "C",
+            "cartCoords": "2.4129 2.6056 -0.3832"
+        },
+        {
+            "id": 16,
+            "symbol": "C",
+            "cartCoords": "1.8327 1.1333 2.8495"
+        },
+        {
+            "id": 17,
+            "symbol": "C",
+            "cartCoords": "1.1533 -3.3682 -0.2881"
+        },
+        {
+            "id": 18,
+            "symbol": "C",
+            "cartCoords": "0.7420 -2.7877 2.1063"
+        },
+        {
+            "id": 19,
+            "symbol": "C",
+            "cartCoords": "1.2367 -1.6887 2.8943"
+        },
+        {
+            "id": 20,
+            "symbol": "C",
+            "cartCoords": "0.6344 -2.5573 -2.4125"
+        },
+        {
+            "id": 21,
+            "symbol": "C",
+            "cartCoords": "1.6822 -0.4043 -3.1256"
+        },
+        {
+            "id": 22,
+            "symbol": "C",
+            "cartCoords": "1.5988 2.0068 -2.4870"
+        },
+        {
+            "id": 23,
+            "symbol": "C",
+            "cartCoords": "0.5863 3.0270 1.8062"
+        },
+        {
+            "id": 24,
+            "symbol": "C",
+            "cartCoords": "1.1802 3.3171 -0.6015"
+        },
+        {
+            "id": 25,
+            "symbol": "C",
+            "cartCoords": "0.6120 0.6637 3.4559"
+        },
+        {
+            "id": 26,
+            "symbol": "C",
+            "cartCoords": "-0.2660 -3.5283 -0.4930"
+        },
+        {
+            "id": 27,
+            "symbol": "C",
+            "cartCoords": "-0.6762 -2.9475 1.9021"
+        },
+        {
+            "id": 28,
+            "symbol": "C",
+            "cartCoords": "0.3141 -0.7480 3.4792"
+        },
+        {
+            "id": 29,
+            "symbol": "C",
+            "cartCoords": "-0.5863 -3.0270 -1.8062"
+        },
+        {
+            "id": 30,
+            "symbol": "C",
+            "cartCoords": "0.6207 -1.3752 -3.2375"
+        },
+        {
+            "id": 31,
+            "symbol": "C",
+            "cartCoords": "1.1040 0.9078 -3.2750"
+        },
+        {
+            "id": 32,
+            "symbol": "C",
+            "cartCoords": "0.6762 2.9475 -1.9021"
+        },
+        {
+            "id": 33,
+            "symbol": "C",
+            "cartCoords": "0.2660 3.5283 0.4930"
+        },
+        {
+            "id": 34,
+            "symbol": "C",
+            "cartCoords": "-0.6344 2.5573 2.4125"
+        },
+        {
+            "id": 35,
+            "symbol": "C",
+            "cartCoords": "-0.6207 1.3752 3.2375"
+        },
+        {
+            "id": 36,
+            "symbol": "C",
+            "cartCoords": "-1.1802 -3.3171 0.6015"
+        },
+        {
+            "id": 37,
+            "symbol": "C",
+            "cartCoords": "-1.5988 -2.0068 2.4870"
+        },
+        {
+            "id": 38,
+            "symbol": "C",
+            "cartCoords": "-1.1040 -0.9078 3.2750"
+        },
+        {
+            "id": 39,
+            "symbol": "C",
+            "cartCoords": "-1.8190 -2.3154 -2.0245"
+        },
+        {
+            "id": 40,
+            "symbol": "C",
+            "cartCoords": "-0.6120 -0.6637 -3.4559"
+        },
+        {
+            "id": 41,
+            "symbol": "C",
+            "cartCoords": "-0.3141 0.7480 -3.4792"
+        },
+        {
+            "id": 42,
+            "symbol": "C",
+            "cartCoords": "-0.7420 2.7877 -2.1063"
+        },
+        {
+            "id": 43,
+            "symbol": "C",
+            "cartCoords": "-1.1533 3.3682 0.2881"
+        },
+        {
+            "id": 44,
+            "symbol": "C",
+            "cartCoords": "-1.7093 2.7687 1.4734"
+        },
+        {
+            "id": 45,
+            "symbol": "C",
+            "cartCoords": "-1.6822 0.4043 3.1256"
+        },
+        {
+            "id": 46,
+            "symbol": "C",
+            "cartCoords": "-2.4129 -2.6056 0.3832"
+        },
+        {
+            "id": 47,
+            "symbol": "C",
+            "cartCoords": "-2.6725 -1.7952 1.5485"
+        },
+        {
+            "id": 48,
+            "symbol": "C",
+            "cartCoords": "-2.7332 -2.1042 -0.9300"
+        },
+        {
+            "id": 49,
+            "symbol": "C",
+            "cartCoords": "-1.8327 -1.1333 -2.8495"
+        },
+        {
+            "id": 50,
+            "symbol": "C",
+            "cartCoords": "-1.2367 1.6887 -2.8943"
+        },
+        {
+            "id": 51,
+            "symbol": "C",
+            "cartCoords": "-1.6574 2.9989 -1.0111"
+        },
+        {
+            "id": 52,
+            "symbol": "C",
+            "cartCoords": "-2.7702 1.7990 1.3612"
+        },
+        {
+            "id": 53,
+            "symbol": "C",
+            "cartCoords": "-2.7559 0.6159 2.1872"
+        },
+        {
+            "id": 54,
+            "symbol": "C",
+            "cartCoords": "-3.2507 -0.4831 1.3992"
+        },
+        {
+            "id": 55,
+            "symbol": "C",
+            "cartCoords": "-3.3119 -0.7909 -1.0789"
+        },
+        {
+            "id": 56,
+            "symbol": "C",
+            "cartCoords": "-2.7559 -0.1913 -2.2642"
+        },
+        {
+            "id": 57,
+            "symbol": "C",
+            "cartCoords": "-2.4586 1.2192 -2.2872"
+        },
+        {
+            "id": 58,
+            "symbol": "C",
+            "cartCoords": "-2.7182 2.0292 -1.1233"
+        },
+        {
+            "id": 59,
+            "symbol": "C",
+            "cartCoords": "-3.2742 1.4297 0.0620"
+        },
+        {
+            "id": 60,
+            "symbol": "C",
+            "cartCoords": "-3.5714 0.0192 0.0850"
+        }
+    ],
+    "bond": [
+        {
+            "id": 61,
+            "bondAtom1": "1",
+            "bondAtom2": "2",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 62,
+            "bondAtom1": "1",
+            "bondAtom2": "4",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 63,
+            "bondAtom1": "1",
+            "bondAtom2": "5",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 64,
+            "bondAtom1": "2",
+            "bondAtom2": "3",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 65,
+            "bondAtom1": "2",
+            "bondAtom2": "6",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 66,
+            "bondAtom1": "3",
+            "bondAtom2": "7",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 67,
+            "bondAtom1": "3",
+            "bondAtom2": "8",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 68,
+            "bondAtom1": "4",
+            "bondAtom2": "9",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 69,
+            "bondAtom1": "4",
+            "bondAtom2": "10",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 70,
+            "bondAtom1": "5",
+            "bondAtom2": "11",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 71,
+            "bondAtom1": "5",
+            "bondAtom2": "12",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 72,
+            "bondAtom1": "6",
+            "bondAtom2": "12",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 73,
+            "bondAtom1": "6",
+            "bondAtom2": "13",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 74,
+            "bondAtom1": "7",
+            "bondAtom2": "14",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 75,
+            "bondAtom1": "7",
+            "bondAtom2": "15",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 76,
+            "bondAtom1": "8",
+            "bondAtom2": "10",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 77,
+            "bondAtom1": "8",
+            "bondAtom2": "16",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 78,
+            "bondAtom1": "9",
+            "bondAtom2": "17",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 79,
+            "bondAtom1": "9",
+            "bondAtom2": "18",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 80,
+            "bondAtom1": "10",
+            "bondAtom2": "19",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 81,
+            "bondAtom1": "11",
+            "bondAtom2": "17",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 82,
+            "bondAtom1": "11",
+            "bondAtom2": "20",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 83,
+            "bondAtom1": "12",
+            "bondAtom2": "21",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 84,
+            "bondAtom1": "13",
+            "bondAtom2": "15",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 85,
+            "bondAtom1": "13",
+            "bondAtom2": "22",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 86,
+            "bondAtom1": "14",
+            "bondAtom2": "16",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 87,
+            "bondAtom1": "14",
+            "bondAtom2": "23",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 88,
+            "bondAtom1": "15",
+            "bondAtom2": "24",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 89,
+            "bondAtom1": "16",
+            "bondAtom2": "25",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 90,
+            "bondAtom1": "17",
+            "bondAtom2": "26",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 91,
+            "bondAtom1": "18",
+            "bondAtom2": "19",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 92,
+            "bondAtom1": "18",
+            "bondAtom2": "27",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 93,
+            "bondAtom1": "19",
+            "bondAtom2": "28",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 94,
+            "bondAtom1": "20",
+            "bondAtom2": "29",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 95,
+            "bondAtom1": "20",
+            "bondAtom2": "30",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 96,
+            "bondAtom1": "21",
+            "bondAtom2": "30",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 97,
+            "bondAtom1": "21",
+            "bondAtom2": "31",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 98,
+            "bondAtom1": "22",
+            "bondAtom2": "31",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 99,
+            "bondAtom1": "22",
+            "bondAtom2": "32",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 100,
+            "bondAtom1": "23",
+            "bondAtom2": "33",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 101,
+            "bondAtom1": "23",
+            "bondAtom2": "34",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 102,
+            "bondAtom1": "24",
+            "bondAtom2": "32",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 103,
+            "bondAtom1": "24",
+            "bondAtom2": "33",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 104,
+            "bondAtom1": "25",
+            "bondAtom2": "28",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 105,
+            "bondAtom1": "25",
+            "bondAtom2": "35",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 106,
+            "bondAtom1": "26",
+            "bondAtom2": "29",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 107,
+            "bondAtom1": "26",
+            "bondAtom2": "36",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 108,
+            "bondAtom1": "27",
+            "bondAtom2": "36",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 109,
+            "bondAtom1": "27",
+            "bondAtom2": "37",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 110,
+            "bondAtom1": "28",
+            "bondAtom2": "38",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 111,
+            "bondAtom1": "29",
+            "bondAtom2": "39",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 112,
+            "bondAtom1": "30",
+            "bondAtom2": "40",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 113,
+            "bondAtom1": "31",
+            "bondAtom2": "41",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 114,
+            "bondAtom1": "32",
+            "bondAtom2": "42",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 115,
+            "bondAtom1": "33",
+            "bondAtom2": "43",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 116,
+            "bondAtom1": "34",
+            "bondAtom2": "35",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 117,
+            "bondAtom1": "34",
+            "bondAtom2": "44",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 118,
+            "bondAtom1": "35",
+            "bondAtom2": "45",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 119,
+            "bondAtom1": "36",
+            "bondAtom2": "46",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 120,
+            "bondAtom1": "37",
+            "bondAtom2": "38",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 121,
+            "bondAtom1": "37",
+            "bondAtom2": "47",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 122,
+            "bondAtom1": "38",
+            "bondAtom2": "45",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 123,
+            "bondAtom1": "39",
+            "bondAtom2": "48",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 124,
+            "bondAtom1": "39",
+            "bondAtom2": "49",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 125,
+            "bondAtom1": "40",
+            "bondAtom2": "41",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 126,
+            "bondAtom1": "40",
+            "bondAtom2": "49",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 127,
+            "bondAtom1": "41",
+            "bondAtom2": "50",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 128,
+            "bondAtom1": "42",
+            "bondAtom2": "50",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 129,
+            "bondAtom1": "42",
+            "bondAtom2": "51",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 130,
+            "bondAtom1": "43",
+            "bondAtom2": "44",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 131,
+            "bondAtom1": "43",
+            "bondAtom2": "51",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 132,
+            "bondAtom1": "44",
+            "bondAtom2": "52",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 133,
+            "bondAtom1": "45",
+            "bondAtom2": "53",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 134,
+            "bondAtom1": "46",
+            "bondAtom2": "47",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 135,
+            "bondAtom1": "46",
+            "bondAtom2": "48",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 136,
+            "bondAtom1": "47",
+            "bondAtom2": "54",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 137,
+            "bondAtom1": "48",
+            "bondAtom2": "55",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 138,
+            "bondAtom1": "49",
+            "bondAtom2": "56",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 139,
+            "bondAtom1": "50",
+            "bondAtom2": "57",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 140,
+            "bondAtom1": "51",
+            "bondAtom2": "58",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 141,
+            "bondAtom1": "52",
+            "bondAtom2": "53",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 142,
+            "bondAtom1": "52",
+            "bondAtom2": "59",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 143,
+            "bondAtom1": "53",
+            "bondAtom2": "54",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 144,
+            "bondAtom1": "54",
+            "bondAtom2": "60",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 145,
+            "bondAtom1": "55",
+            "bondAtom2": "56",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 146,
+            "bondAtom1": "55",
+            "bondAtom2": "60",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 147,
+            "bondAtom1": "56",
+            "bondAtom2": "57",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 148,
+            "bondAtom1": "57",
+            "bondAtom2": "58",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 149,
+            "bondAtom1": "58",
+            "bondAtom2": "59",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        },
+        {
+            "id": 150,
+            "bondAtom1": "59",
+            "bondAtom2": "60",
+            "bondOrderType": "0",
+            "bondOrder": "1",
+            "color": "#fff"
+        }
+    ]
+}

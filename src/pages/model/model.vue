@@ -23,7 +23,7 @@
 
 <script setup>
 import fragment from "../../components/fragment.vue";
-import {ref ,reactive,watch ,watchEffect } from "vue";
+import {ref ,reactive,watch ,watchEffect ,nextTick} from "vue";
 const currentModel = ref([])
 // const books = reactive([parent.window.currentModel])
 // const books1 = parent.window.currentModel
@@ -31,7 +31,9 @@ const currentModel = ref([])
 // watch(currentModel,()=>{
 //   alert(123)
 // })
-top.watchEffect(() => currentModel.value = parent.window.currentModel.value)
+top.watchEffect(() => {
+currentModel.value = parent.window.currentModel.value
+} )
 </script>
 
 <style lang="scss">

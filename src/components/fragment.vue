@@ -20,7 +20,7 @@ const fragment = reactive(window.c3Data[type]);
     </template>
     <template v-for="bond in fragment.bond" :key="bond.id">
       <BaseBond v-if="!bond.isElectronPair" :bondAtom1="fragment.atom[bond.bondAtom1]"
-        :bondAtom2="fragment.atom[bond.bondAtom2]" :bondOrderType="bond.bondOrderType" :bondOrder="bond.bondOrder" />
+        :bondAtom2="fragment.atom[bond.bondAtom2]" :bondOrderType="bond.bondOrderType" :bondOrder="bond.bondOrder" :color="bond.color"/>
       <BaseElectronPair v-else-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
     </template>
   </a-entity>

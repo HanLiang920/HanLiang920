@@ -10,7 +10,8 @@ module.exports = defineConfig({
   pages: {
     index: 'src/pages/index/main.js',
     ar: 'src/pages/ar/main.js',
-    model: 'src/pages/model/main.js'
+    model: 'src/pages/model/main.js',
+    test: 'src/pages/test/main.js',
   },
   chainWebpack: config => {
     config.module

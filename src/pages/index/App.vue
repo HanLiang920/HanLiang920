@@ -27,8 +27,8 @@
 
     </a-menu>
   </a-drawer>
-  <iframe v-show="mode === 'AR'" src="./ar.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
-  <iframe v-show="mode === '模型'" src="./model.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
+  <iframe v-if="mode === 'AR'" src="./ar.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
+  <iframe v-if="mode === '模型'" src="./model.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
 </template>
 
 <script setup>

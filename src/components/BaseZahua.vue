@@ -24,7 +24,7 @@ const position = computed(() => {
 
 <template>
   <a-entity :position="position" :rotation="rotation" scale="0.4 0.4 0.4">
-    <a-entity :key="id" :position="`0 ${height===undefined?-3.5:height} 0`" geometry="primitive: zahua;" material="color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:1"></a-entity>
+    <a-entity :key="id" :position="`0 ${height===undefined?-3:height} 0`" geometry="primitive: zahua;" material="color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:1"></a-entity>
   </a-entity>
 </template>
 

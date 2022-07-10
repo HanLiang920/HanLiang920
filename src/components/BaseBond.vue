@@ -24,8 +24,6 @@ const bondAtom2Info = computed(() => {
 const bondInfo = computed(() => {
     const { x: x1, y: y1, z: z1 } = bondAtom1
     const { x: x2, y: y2, z: z2 } = bondAtom2
-    const r1 = bondAtom1Info.value.radius
-    const r2 = bondAtom2Info.value.radius
     const x = (x1 + x2) / 2,
         y = (y1 + y2) / 2,
         z = (z1 + z2) / 2,

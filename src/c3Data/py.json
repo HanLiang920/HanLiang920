@@ -21,13 +21,13 @@
             "id": "4",
             "bondAtom1": "2",
             "bondAtom2": "1",
-            "isElectronPair":true
+            "zahua":true
         },
         {
             "id": "5",
             "bondAtom1": "3",
             "bondAtom2": "1",
-            "isElectronPair":true
+            "zahua":true
         }
     ],
     "center":"0 0 0"

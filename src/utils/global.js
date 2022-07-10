@@ -67,6 +67,23 @@ AFRAME.registerGeometry('electronPair', {
     }
 });
 
+AFRAME.registerGeometry('zahua', {
+    schema: {
+    },
+
+    init: function (data) {
+        const curve = new THREE.CubicBezierCurve(
+            new THREE.Vector2(0, 0),
+            new THREE.Vector2(1.96, 0),
+            new THREE.Vector2(3.27, 2.95),
+            new THREE.Vector2(0, 3),
+        );
+        const points = curve.getPoints(50);
+
+        this.geometry = new THREE.LatheGeometry(points, 30);
+    }
+});
+
 AFRAME.registerComponent("axes-helper", {
     schema: {
         size: {

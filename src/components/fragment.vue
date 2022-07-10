@@ -2,6 +2,7 @@
 import BaseAtom from './BaseAtom.vue'
 import BaseBond from './BaseBond.vue'
 import BaseElectronPair from './BaseElectronPair.vue'
+import BaseZahua from './BaseZahua.vue'
 import { reactive, computed } from "vue";
 
 const { type } = defineProps({
@@ -19,9 +20,10 @@ const fragment = reactive(window.c3Data[type]);
       <BaseAtom v-if="atom.symbol" v-bind="atom" />
     </template>
     <template v-for="bond in fragment.bond" :key="bond.id">
-      <BaseBond v-if="!bond.isElectronPair" :bondAtom1="fragment.atom[bond.bondAtom1]"
+      <BaseElectronPair v-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
+      <BaseZahua v-else-if="bond.zahua===true" :height="bond.height" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
+      <BaseBond v-else :bondAtom1="fragment.atom[bond.bondAtom1]"
         :bondAtom2="fragment.atom[bond.bondAtom2]" :bondOrderType="bond.bondOrderType" :bondOrder="bond.bondOrder" :color="bond.color"/>
-      <BaseElectronPair v-else-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
     </template>
   </a-entity>
   <a-entity v-if="showAxes" axes-helper="size:2"></a-entity>

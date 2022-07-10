@@ -22,16 +22,16 @@
         </a-sub-menu>
         <a-sub-menu key="杂化轨道模型">
           <template #title>杂化轨道模型</template>
-          <a-menu-item key="s轨道">s轨道</a-menu-item>
+          <a-menu-item key="s">s轨道</a-menu-item>
           <a-sub-menu key="p轨道">
             <template #title>p轨道</template>
             <a-menu-item key="px">p<sub>x</sub>轨道</a-menu-item>
             <a-menu-item key="py">p<sub>y</sub>轨道</a-menu-item>
             <a-menu-item key="pz">p<sub>z</sub>轨道</a-menu-item>
           </a-sub-menu>
-          <a-menu-item key="sp轨道">sp轨道</a-menu-item>
-          <a-menu-item key="sp1轨道">sp1轨道</a-menu-item>
-          <a-menu-item key="sp2轨道">sp2轨道</a-menu-item>
+          <a-menu-item key="sp">sp轨道</a-menu-item>
+          <a-menu-item key="sp2">sp2轨道</a-menu-item>
+          <a-menu-item key="sp3">sp3轨道</a-menu-item>
         </a-sub-menu>
 
     </a-menu>

@@ -41,7 +41,7 @@ window.atomInfos = {
 
 const c3Data = {}
 const requireAll = context => context.keys().map(context);
-const allJson = require.context('../c3Data', false, /.json/);
+const allJson = require.context('../c3Data', false);
 const paths = allJson.keys()
 requireAll(allJson).forEach((data, i) => {
     const name = paths[i].split('/').pop().replace('.json', '')

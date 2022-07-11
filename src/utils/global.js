@@ -13,6 +13,10 @@ window.atomInfos = {
         radius: 0.39,
         color: "#fff",
     },
+    type3: {
+        radius: 0.39,
+        color: "#114ccf",
+    },
     C: {
         radius: 0.43,
         color: "black",

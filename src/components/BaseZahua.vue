@@ -2,10 +2,12 @@
 import { ref, computed } from "vue";
 import { number, string } from "_vue-types@3.0.2@vue-types";
 import { getRotation } from '../utils'
-const { bondAtom1, bondAtom2,height,id} = defineProps({
+const { bondAtom1, bondAtom2,height,scale,opacity,id} = defineProps({
     bondAtom1: Object,
     bondAtom2: Object,
     height:Number,
+    scale:Number,
+    opacity:Number,
     id:String
 });
 const rotation = computed(() => {
@@ -23,8 +25,8 @@ const position = computed(() => {
 </script>
 
 <template>
-  <a-entity :position="position" :rotation="rotation" scale="0.4 0.4 0.4">
-    <a-entity :key="id" :position="`0 ${height===undefined?-3:height} 0`" geometry="primitive: zahua;" material="color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:1"></a-entity>
+  <a-entity :position="position" :rotation="rotation" :scale="`${scale||0.4} ${scale||0.4} ${scale||0.4}`">
+    <a-entity :key="id" :position="`0 ${height===undefined?-3:height} 0`" geometry="primitive: zahua;" :material="`color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:${opacity||1}`"></a-entity>
   </a-entity>
 </template>
 

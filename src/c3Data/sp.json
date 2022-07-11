@@ -1,0 +1,52 @@
+{
+    "atom": [
+        {
+            "id": "1",
+            "symbol": "",
+            "cartCoords": "0 0 0"
+        },
+        {
+            "id": "2",
+            "symbol": "",
+            "cartCoords": "2 0 0"
+        },
+        {
+            "id": "3",
+            "symbol": "",
+            "cartCoords": "-2 0 0"
+        }
+    ],
+    "bond": [
+        {
+            "id": "5",
+            "bondAtom1": "2",
+            "bondAtom2": "1",
+            "zahua":true,
+            "scale":0.2,
+            "opacity":1
+        },
+        {
+            "id": "6",
+            "bondAtom1": "3",
+            "bondAtom2": "1",
+            "zahua":true,
+            "scale":0.2,
+            "opacity":1
+        },
+        {
+            "id": "4",
+            "bondAtom1": "2",
+            "bondAtom2": "1",
+            "zahua":true,
+            "opacity":0.4
+        },
+        {
+            "id": "5",
+            "bondAtom1": "3",
+            "bondAtom2": "1",
+            "zahua":true,
+            "opacity":0.4
+        }
+    ],
+    "center":"0 0 0"
+}

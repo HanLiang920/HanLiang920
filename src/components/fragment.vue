@@ -21,7 +21,7 @@ const fragment = reactive(window.c3Data[type]);
     </template>
     <template v-for="bond in fragment.bond" :key="bond.id">
       <BaseElectronPair v-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
-      <BaseZahua v-else-if="bond.zahua===true" :height="bond.height" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
+      <BaseZahua v-else-if="bond.zahua===true" :height="bond.height" :scale="bond.scale" :opacity="bond.opacity" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
       <BaseBond v-else :bondAtom1="fragment.atom[bond.bondAtom1]"
         :bondAtom2="fragment.atom[bond.bondAtom2]" :bondOrderType="bond.bondOrderType" :bondOrder="bond.bondOrder" :color="bond.color"/>
     </template>

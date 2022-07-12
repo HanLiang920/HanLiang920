@@ -8,7 +8,7 @@
                    maxCanvasHeight: -1;" vr-mode-ui="enabled: false">
 
 
-    <fragment v-if="currentModel[0]" :type="currentModel[0]" :key="currentModel[0]"  position="0 1 0"/>
+    <showContent v-if="currentModel[0]" :type="currentModel[0]" :key="currentModel[0]" />
     <a-plane shadow-material height="100" width="100" rotation="-90 0 0" shadow="cast:false;receive: true;"></a-plane>
     <a-entity camera look-controls="enabled: false" object-controls="target: 0 0.6 -0.5; initialPosition: 0 1.6 5">
     </a-entity>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import fragment from "../../components/fragment.vue";
+import showContent from "../../components/showContent.vue";
 import {ref ,reactive,watch ,watchEffect ,nextTick} from "vue";
 const currentModel = ref([])
 // const books = reactive([parent.window.currentModel])

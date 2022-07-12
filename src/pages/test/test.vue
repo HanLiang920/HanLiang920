@@ -9,7 +9,7 @@
                    maxCanvasWidth: -1;
                    maxCanvasHeight: -1;"
            vr-mode-ui="enabled: false"> 
-    <fragment type="sp3"   position="0 1 0"/>
+    <fragment type="2+2"   position="0 1 0"/>
   </a-scene>
 
 </template>

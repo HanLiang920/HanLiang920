@@ -1,14 +1,15 @@
 <script setup>
 import { ref, computed } from "vue";
-import { number, string } from "_vue-types@3.0.2@vue-types";
 import { getRotation } from '../utils'
-const { bondAtom1, bondAtom2,height,scale,opacity,id} = defineProps({
+const { bondAtom1, bondAtom2,height,scale,opacity,id,zahuaVisible} = defineProps({
     bondAtom1: Object,
     bondAtom2: Object,
     height:Number,
     scale:Number,
     opacity:Number,
-    id:String
+    id:String,
+    animation__visible:String,
+    zahuaVisible:Boolean
 });
 const rotation = computed(() => {
     const { x: x1, y: y1, z: z1 } = bondAtom1
@@ -26,7 +27,7 @@ const position = computed(() => {
 
 <template>
   <a-entity :position="position" :rotation="rotation" :scale="`${scale||0.4} ${scale||0.4} ${scale||0.4}`">
-    <a-entity :key="id" :position="`0 ${height===undefined?-3:height} 0`" geometry="primitive: zahua;" :material="`color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:${opacity||1}`"></a-entity>
+    <a-entity :animation__visible="animation__visible" :key="id" :position="`0 ${height===undefined?-3:height} 0`" geometry="primitive: zahua;" :material="`visible: ${zahuaVisible};color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:${opacity||1}`"></a-entity>
   </a-entity>
 </template>
 

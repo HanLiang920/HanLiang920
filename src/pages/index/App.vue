@@ -37,13 +37,13 @@
     </a-menu>
   </a-drawer>
   <iframe v-if="mode === 'AR'" src="./ar.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
-  <iframe v-if="mode === '模型'" src="./model.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
+  <iframe v-if="mode === '模型'" ref="modelEl" src="./model.html" style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
 </template>
 
 <script setup>
 import { MenuOutlined } from "@ant-design/icons-vue";
 import modeChoose from "../../components/modeChoose.vue";
-import { ref } from "vue";
+import { ref, watchEffect} from "vue";
 const mode = ref("AR");
 const visible = ref(false);
 const currentModel = ref(["C60"]);
@@ -66,6 +66,11 @@ const modelList = ref([
   { name: "C60" }
 ]);
 window.currentModel = currentModel
+const modelEl = ref()
+console.log(modelEl);
+watchEffect(() => {
+    if(modelEl&&modelEl.value) modelEl.value.contentWindow.postMessage({currentModel:currentModel.value[0]})
+})
 </script>
 
 <style lang="scss">

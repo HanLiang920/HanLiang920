@@ -24,16 +24,20 @@
 <script setup>
 import showContent from "../../components/showContent.vue";
 import {ref ,reactive,watch ,watchEffect ,nextTick} from "vue";
-const currentModel = ref([])
+const currentModel = ref([...top.currentModel.value])
 // const books = reactive([parent.window.currentModel])
 // const books1 = parent.window.currentModel
 // console.log(currentModel,books,books1);
 // watch(currentModel,()=>{
 //   alert(123)
 // })
-top.watchEffect(() => {
-currentModel.value = parent.window.currentModel.value
-} )
+// top.watchEffect(() => {
+// currentModel.value = parent.window.currentModel.value
+// } )
+ window.addEventListener('message', (event) => {
+      const {currentModel:val} = event.data
+      if(val) currentModel.value = [val]
+    })
 </script>
 
 <style lang="scss">

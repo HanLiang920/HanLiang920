@@ -32,20 +32,6 @@
             "zahua":true,
             "scale":0.2,
             "opacity":1
-        },
-        {
-            "id": "4",
-            "bondAtom1": "2",
-            "bondAtom2": "1",
-            "zahua":true,
-            "opacity":0.7
-        },
-        {
-            "id": "5",
-            "bondAtom1": "3",
-            "bondAtom2": "1",
-            "zahua":true,
-            "opacity":0.7
         }
     ],
     "center":"0 0 0"

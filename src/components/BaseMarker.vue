@@ -1,7 +1,6 @@
 <script setup>
-import fragment from './fragment.vue'
 import { ref, onMounted  } from "vue";
-
+import showContent from "./showContent.vue";
 const { id, type } = defineProps({
   id: String,
   type: String,
@@ -22,7 +21,7 @@ onMounted(() => {
 
 <template>
     <a-marker ref="el" type="barcode" :value="id" smooth="true">
-        <fragment v-if="isShow" :type="type" :showAxes="false"/>
+        <showContent v-if="isShow" :type="type" :showAxes="false"/>
     </a-marker>
 </template>
 

@@ -22,14 +22,14 @@
             "bondAtom1": "2",
             "bondAtom2": "1",
             "zahua":true,
-            "opacity":0.7
+            "opacity":0.9
         },
         {
             "id": "5",
             "bondAtom1": "3",
             "bondAtom2": "1",
             "zahua":true,
-            "opacity":0.7
+            "opacity":0.9
         }
     ],
     "center":"0 0 0"

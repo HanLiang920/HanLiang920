@@ -67,7 +67,6 @@ const modelList = ref([
 ]);
 window.currentModel = currentModel
 const modelEl = ref()
-console.log(modelEl);
 watchEffect(() => {
     if(modelEl&&modelEl.value) modelEl.value.contentWindow.postMessage({currentModel:currentModel.value[0]})
 })

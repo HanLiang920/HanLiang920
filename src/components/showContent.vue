@@ -19,7 +19,7 @@
         <fragment type="pz" :showAxes="showAxes"  position="4 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
         <fragment type="sp3" :showAxes="showAxes"  position="0 9999 0" animation="property: position; to: 0 1 0; dur: 1; delay: 2300" />
     </template>
-    <fragment v-else :type="type" :showAxes="showAxes" :key="type"  position="0 1 0" />
+    <fragment v-else :type="type" :showAxes="false" :key="type"  position="0 1 0" />
 </template>
 
 <script setup>

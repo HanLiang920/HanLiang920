@@ -70,16 +70,16 @@ const bondInfo = computed(() => {
             </a-entity>
         </template>
         <template v-else-if="bondOrderType == 13">
-            <a-entity position="0.1 0 0">
-                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+            <a-entity position="0.14 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.07" position="0 -0.05 0">
                 </a-cylinder>
-                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.07" position="0 0.05 0">
                 </a-cylinder>
             </a-entity>
-            <a-entity position="-0.1 0 0">
-                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.05" position="0 -0.05 0">
+            <a-entity position="-0.14 0 0">
+                <a-cylinder :color="bondAtom1Info.color" height="0.1" radius="0.07" position="0 -0.05 0">
                 </a-cylinder>
-                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.05" position="0 0.05 0">
+                <a-cylinder :color="bondAtom2Info.color" height="0.1" radius="0.07" position="0 0.05 0">
                 </a-cylinder>
             </a-entity>
         </template>

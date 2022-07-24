@@ -57,6 +57,10 @@ const VSEPRList = ref([
   { name: "2+0" }
 ]);
 const modelList = ref([
+  { name: "H2O" },
+  { name: "NH3" },
+  { name: "CO2" },
+  { name: "CH2O" },
   { name: "甲烷" },
   { name: "乙烷" },
   { name: "丙烷" },

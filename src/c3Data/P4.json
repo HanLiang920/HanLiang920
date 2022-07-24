@@ -1,0 +1,69 @@
+{
+    "atom": [
+      {
+        "id": "1",
+        "symbol": "P",
+        "cartCoords": "25.8722 42.7728 57.7425"
+      },
+      {
+        "id": "2",
+        "symbol": "P",
+        "cartCoords": "24.6233 42.8297 55.9862"
+      },
+      {
+        "id": "3",
+        "symbol": "P",
+        "cartCoords": "26.0566 44.4005 56.3410"
+      },
+      {
+        "id": "4",
+        "symbol": "P",
+        "cartCoords": "26.7327 42.4272 55.7964"
+      }
+    ],
+    "bond": [
+      {
+        "id": "5",
+        "bondAtom1": "1",
+        "bondAtom2": "4",
+        "bondOrderType": "0",
+        "bondOrder": "1"
+      },
+      {
+        "id": "6",
+        "bondAtom1": "1",
+        "bondAtom2": "2",
+        "bondOrderType": "0",
+        "bondOrder": "1"
+      },
+      {
+        "id": "7",
+        "bondAtom1": "1",
+        "bondAtom2": "3",
+        "bondOrderType": "0",
+        "bondOrder": "1"
+      },
+      {
+        "id": "8",
+        "bondAtom1": "2",
+        "bondAtom2": "3",
+        "bondOrderType": "0",
+        "bondOrder": "1"
+      },
+      {
+        "id": "9",
+        "bondAtom1": "2",
+        "bondAtom2": "4",
+        "bondOrderType": "0",
+        "bondOrder": "1"
+      },
+      {
+        "id": "10",
+        "bondAtom1": "3",
+        "bondAtom2": "4",
+        "bondOrderType": "0",
+        "bondOrder": "1"
+      }
+    ],
+    "center":"-24.6233 -42.8297 -55.9862"
+  }

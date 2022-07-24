@@ -40,6 +40,10 @@ window.atomInfos = {
     N: {
         radius: 0.4,
         color: "#1d0ff9",
+    },
+    P: {
+        radius: 0.4,
+        color: "#d76d1e",
     }
 }
 

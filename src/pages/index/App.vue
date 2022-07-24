@@ -61,6 +61,7 @@ const modelList = ref([
   { name: "NH3" },
   { name: "CO2" },
   { name: "CH2O" },
+  { name: "P4" },
   { name: "甲烷" },
   { name: "乙烷" },
   { name: "丙烷" },

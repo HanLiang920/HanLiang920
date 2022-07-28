@@ -80,9 +80,9 @@
     </div>
 
   </a-drawer>
-  <iframe v-if="mode === 'AR'" src="./ar.html"
+  <iframe v-if="mode === 'AR'" src="./ar.html?v=1.0"
     style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
-  <iframe v-if="mode === '模型'" ref="modelEl" src="./model.html"
+  <iframe v-if="mode === '模型'" ref="modelEl" src="./model.html?v=1.0"
     style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
 </template>
 

@@ -8,13 +8,13 @@
                    logarithmicDepthBuffer: true;
                    maxCanvasWidth: -1;
                    maxCanvasHeight: -1 ;`"
-           :arjs="`sourceType: webcam;sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_bch_13_5_5;cameraParametersUrl:./data/camera_para.dat`"
+           :arjs="`sourceType: webcam;sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_5_5;cameraParametersUrl:./data/camera_para.dat`"
            vr-mode-ui="enabled: false">
     <BaseMarker id="0"
-                type="甲烷"
+                type="4+0"
                 :showData="showData" />
     <BaseMarker id="1"
-                type="sp3"
+                type="3+1"
                 :showData="showData" />
     <a-entity camera look-controls="enabled: false" object-controls="target: 0 0 0; initialPosition: 0 0 0"></a-entity>
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>

@@ -5,7 +5,9 @@
                    physicallyCorrectLights: true;
                    logarithmicDepthBuffer: true;
                    maxCanvasWidth: -1;
-                   maxCanvasHeight: -1;" vr-mode-ui="enabled: false">
+                   maxCanvasHeight: -1;" vr-mode-ui="enabled: false" :style="{
+                        background: showBackground?'linear-gradient(200deg, #f4efef, #e3eeff)':''
+                   }">
 
 
     <showContent v-if="currentModel[0]" :type="currentModel[0]" :key="currentModel[0]" />
@@ -25,6 +27,8 @@
 import showContent from "../../components/showContent.vue";
 import {ref ,reactive,watch ,watchEffect ,nextTick} from "vue";
 const currentModel = ref([...top.currentModel.value])
+const showBackground = ref(top.showBackground.value)
+const showAxes = ref(top.showAxes.value)
 // const books = reactive([parent.window.currentModel])
 // const books1 = parent.window.currentModel
 // console.log(currentModel,books,books1);
@@ -35,8 +39,11 @@ const currentModel = ref([...top.currentModel.value])
 // currentModel.value = parent.window.currentModel.value
 // } )
  window.addEventListener('message', (event) => {
-      const {currentModel:val} = event.data
+      if(!event.data || event.data.type==="webpackOk") return
+      const {currentModel:val,showBackground:showBackground1,showAxes:showAxes1} = event.data
       if(val) currentModel.value = [val]
+      showBackground.value = showBackground1
+      showAxes.value = showAxes1
     })
 </script>
 
@@ -53,7 +60,6 @@ const currentModel = ref([...top.currentModel.value])
   bottom: 0;
   right: 0;
   left: 0;
-  background: linear-gradient(200deg, #f4efef, #e3eeff);
 }
 
 </style>

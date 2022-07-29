@@ -19,13 +19,13 @@
               <a-sub-menu key="无机化合物">
                 <template #title>无机化合物</template>
                 <a-menu-item v-for="it in modelList" :key="it.name">
-                  {{ it.name }}
+                  <BaseName :name="it.name"/>
                 </a-menu-item>
               </a-sub-menu>
               <a-sub-menu key="有机化合物">
                 <template #title>有机化合物</template>
                 <a-menu-item v-for="it in modelList2" :key="it.name">
-                  {{ it.name }}
+                  <BaseName :name="it.name"/>
                 </a-menu-item>
               </a-sub-menu>
 
@@ -90,6 +90,7 @@
 
 import { MenuOutlined, CheckOutlined, CloseOutlined } from "@ant-design/icons-vue";
 import modeChoose from "../../components/modeChoose.vue";
+import BaseName from "../../components/BaseName.vue";
 import { ref, watchEffect ,computed} from "vue";
 const version = computed(() => process.env.version) 
 const mode = ref("AR");
@@ -114,12 +115,12 @@ const modelList = ref([
 ])
 const modelList2 = ref([
   { name: "CH2O" },
-  { name: "甲烷" },
-  { name: "乙烷" },
-  { name: "丙烷" },
-  { name: "乙烯" },
-  { name: "乙炔" },
-  { name: "苯" },
+  { name: "CH4" },
+  { name: "C2H6" },
+  { name: "C3H8" },
+  { name: "C2H4" },
+  { name: "C2H2" },
+  { name: "C6H6" },
   { name: "C60" }
 ]);
 window.currentModel = currentModel

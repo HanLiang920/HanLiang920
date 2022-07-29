@@ -24,5 +24,9 @@ module.exports = defineConfig({
         };
         return options;
       });
+    config.plugin('define').tap(args => {
+      args[0]['process.env'].version = new Date().getTime()
+      return args
+    });
   }
 })

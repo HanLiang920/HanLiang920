@@ -53,7 +53,7 @@
       </div>
 
 
-      <div style="padding: 24px;padding-bottom: 10px;">
+      <div style="padding:10px 24px;border-top: 1px solid rgba(60, 60, 60, .12);">
         <div class="switch-item">
           <span>显示背景</span>
           <a-switch v-model:checked="showBackground">
@@ -80,16 +80,18 @@
     </div>
 
   </a-drawer>
-  <iframe v-if="mode === 'AR'" src="./ar.html?v=1.0"
+  <iframe v-if="mode === 'AR'" :src="`./ar.html?v=${version}`"
     style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
   <iframe v-if="mode === '模型'" ref="modelEl" src="./model.html?v=1.0"
     style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
 </template>
 
 <script setup>
+
 import { MenuOutlined, CheckOutlined, CloseOutlined } from "@ant-design/icons-vue";
 import modeChoose from "../../components/modeChoose.vue";
-import { ref, watchEffect } from "vue";
+import { ref, watchEffect ,computed} from "vue";
+const version = computed(() => process.env.version) 
 const mode = ref("AR");
 const visible = ref(false);
 const showBackground = ref(true);

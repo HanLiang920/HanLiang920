@@ -16,6 +16,12 @@
     <BaseMarker id="1"
                 type="3+1"
                 :showData="showData" />
+    <BaseMarker id="2"
+                type="H2O"
+                :showData="showData" />
+    <BaseMarker id="3"
+                type="NH3"
+                :showData="showData" />
     <a-entity camera look-controls="enabled: false" object-controls="target: 0 0 0; initialPosition: 0 0 0"></a-entity>
     <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
     <a-entity light="type: directional;
@@ -34,6 +40,7 @@
 <script setup>
 import {ref,reactive,computed } from "vue";
 import BaseMarker from "../../components/BaseMarker.vue";
+const hasInit = ref(false)
 const showData = reactive({});
 // const width = ref(480);
 // const height = ref(640);
@@ -44,11 +51,12 @@ const showData = reactive({});
 // height.value = 844
 // }
 window.addEventListener('camera-init', function () {
+    hasInit.value = true
     const main = parent.window.document.getElementsByClassName('main')[0]
     if (main) main.parentNode.removeChild(main)
 });
 const isShowScan = computed(() => {
-  return Object.keys(showData).length>0?false:true
+  return Object.keys(showData).length>0 && hasInit?false:true
 });
 </script>
 

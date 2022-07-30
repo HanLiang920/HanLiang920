@@ -32,7 +32,21 @@
             </a-sub-menu>
             <a-sub-menu key="VSEPR模型">
               <template #title>VSEPR模型</template>
-              <a-menu-item v-for="it in VSEPRList" :key="it.name">{{ it.name }}</a-menu-item>
+              <a-sub-menu key="直线形">
+                <template #title>直线形</template>
+                <a-menu-item key="2+0">2+0</a-menu-item>
+              </a-sub-menu>
+              <a-sub-menu key="平面三角形">
+                <template #title>平面三角形</template>
+                <a-menu-item key="2+1">2+1</a-menu-item>
+                <a-menu-item key="3+0">3+0</a-menu-item>
+              </a-sub-menu>
+              <a-sub-menu key="四面体">
+                <template #title>四面体</template>
+                <a-menu-item key="2+2">2+2</a-menu-item>
+                <a-menu-item key="3+1">3+1</a-menu-item>
+                <a-menu-item key="4+0">4+0</a-menu-item>
+              </a-sub-menu>
             </a-sub-menu>
             <a-sub-menu key="杂化轨道模型">
               <template #title>杂化轨道模型</template>
@@ -99,19 +113,12 @@ const showBackground = ref(true);
 const showAxes = ref(true);
 const currentModel = ref(["C60"]);
 const openKeys = ref(['分子模型']);
-const VSEPRList = ref([
-  { name: "4+0" },
-  { name: "3+1" },
-  { name: "2+2" },
-  { name: "3+0" },
-  { name: "2+1" },
-  { name: "2+0" }
-]);
 const modelList = ref([
   { name: "H2O" },
   { name: "NH3" },
   { name: "CO2" },
   { name: "P4" },
+  { name: "S8" },
 ])
 const modelList2 = ref([
   { name: "CH2O" },

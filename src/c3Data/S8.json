@@ -1,0 +1,104 @@
+{
+    "atom": [
+        {
+            "id": 1,
+            "symbol": "S",
+            "cartCoords": "1.4390 -41.0180 20.2760"
+        },
+        {
+            "id": 2,
+            "symbol": "S",
+            "cartCoords": "2.9790 -39.7200 20.5980"
+        },
+        {
+            "id": 3,
+            "symbol": "S",
+            "cartCoords": "2.0630 -42.4460 18.9460"
+        },
+        {
+            "id": 4,
+            "symbol": "S",
+            "cartCoords": "3.9500 -40.2780 22.3120"
+        },
+        {
+            "id": 5,
+            "symbol": "S",
+            "cartCoords": "5.6020 -41.3490 21.7570"
+        },
+        {
+            "id": 6,
+            "symbol": "S",
+            "cartCoords": "2.5980 -44.0970 20.0290"
+        },
+        {
+            "id": 7,
+            "symbol": "S",
+            "cartCoords": "4.6380 -44.1210 20.1840"
+        },
+        {
+            "id": 8,
+            "symbol": "S",
+            "cartCoords": "5.1780 -43.3370 21.9920"
+        }
+    ],
+    "bond": [
+        {
+            "id": 9,
+            "bondAtom1": "1",
+            "bondAtom2": "2",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": 10,
+            "bondAtom1": "2",
+            "bondAtom2": "4",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": 11,
+            "bondAtom1": "4",
+            "bondAtom2": "5",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": 12,
+            "bondAtom1": "5",
+            "bondAtom2": "8",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": 13,
+            "bondAtom1": "8",
+            "bondAtom2": "7",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": 14,
+            "bondAtom1": "7",
+            "bondAtom2": "6",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": 15,
+            "bondAtom1": "6",
+            "bondAtom2": "3",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        },
+        {
+            "id": 16,
+            "bondAtom1": "3",
+            "bondAtom2": "1",
+            "bondOrderType": "0",
+            "bondOrder": "1"
+        }
+    ],
+    "center":"-5.1780 43.3370 -21.9920"
+
+}

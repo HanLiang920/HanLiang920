@@ -6,7 +6,7 @@ export function getc3Data(data) {
       const { x, y, z } = AFRAME.utils.coordinates.parse(cartCoords)
       atom[id] = { symbol, x, y, z }
    });
-   return { atom, bond: data.bond, center: data.center }
+   return { atom, bond: data.bond, center: data.center,rotation: data.rotation }
 }
 
 export function getRotation([x, y, z], [x1, y1, z1]) {

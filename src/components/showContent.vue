@@ -26,7 +26,7 @@
           <fragment type="sp3" :showAxes="showAxes"  position="0 9999 0" animation="property: position; to: 0 1 0; dur: 1; delay: 2300" />
         </a-entity>
     </template>
-    <fragment v-else :type="type" :showAxes="showAxes" :key="type"  position="0 1.5 0" />
+    <fragment v-else :type="type" :showAxes="showAxes" :key="type"  position="0 1.2 0" />
     <div v-if="['sp','sp2','sp3'].includes(type)" class="replay" @click="key++"><reload-outlined :class="{rotatefresh:true,rotatefresh1:key&&key%2===0,rotatefresh2:key&&key%2===1}" /></div>
 </template>
 

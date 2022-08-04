@@ -17,7 +17,7 @@ const fragment = reactive(window.c3Data[type]);
 
 <template>
 <a-entity use-rotate v-if="fragment">
-  <a-entity shadow  :position="fragment.center">
+  <a-entity shadow  :position="fragment.center" :rotation="fragment.rotation">
     <template  v-for="atom in fragment.atom" :key="atom.id">
       <BaseAtom v-if="atom.symbol" v-bind="atom" :animation__visible="animation__visible"/>
     </template>

@@ -50,6 +50,7 @@ const showData = reactive({});
 // });
 
 window.addEventListener('arjs-video-style', (e) => {
+    alert('init')
     const { width, height } = e.detail
     const canvas = window.document.getElementsByClassName('a-canvas')[0]
     canvas.style.cssText = `position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: ${width}px;height:  ${height}px;`

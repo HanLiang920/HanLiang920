@@ -30,7 +30,7 @@ defineEmits(['update:mode'])
 
         &.choose {
             background: #141414;
-            border-radius: 4vw;
+            border-radius: 15px;
             color:#1890ff;
         }
     }

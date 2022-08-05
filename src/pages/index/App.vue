@@ -159,7 +159,7 @@ watchEffect(() => {
   top: 10px;
   right: 0;
   left: 0;
-  height: 6vh;
+  height: 50px;
   color: #e3e3e3;
   font-size: 16px;
   z-index: 1;
@@ -176,7 +176,7 @@ watchEffect(() => {
     align-items: center;
     justify-content: center;
     color: #fff;
-    border-radius: 4vw;
+    border-radius: 15px;
   }
 }
 

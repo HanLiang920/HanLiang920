@@ -20,7 +20,7 @@
                    intensity: 1.6;" position="-5 3 1.5"></a-entity>
 
     </a-scene>
-    <div class="qr-scanner" v-show="isShowScan">
+    <div class="qr-scanner" v-show="isShowScan && hasInit">
         <div class="box">
             <div class="line"></div>
         </div>
@@ -32,36 +32,12 @@ import { ref, reactive, computed } from "vue";
 import BaseMarker from "../../components/BaseMarker.vue";
 const hasInit = ref(false)
 const showData = reactive({});
-// const width = ref(480);
-// const height = ref(640);
-// const width1 = ref(window.innerWidth);
-// const height1 = ref(window.innerHeight);
-// if(window.orientation===0){
-// width.value = 633
-// height.value = 844
-// }
-// window.addEventListener('camera-init',  ()=>{
-//     hasInit.value = true
-//     const main = parent.window.document.getElementsByClassName('main')[0]
-//     if (main) main.parentNode.removeChild(main)
-//     setTimeout(()=>{
-//         console.log(document.querySelector('video').style.width);
-//     },0)
-// });
 
-window.addEventListener('arjs-video-style', (e) => {
-    alert('init')
-    const { width, height } = e.detail
-    const canvas = window.document.getElementsByClassName('a-canvas')[0]
-    canvas.style.cssText = `position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: ${width}px;height:  ${height}px;`
-
-});
-// window.dispatchEvent(new CustomEvent("arjs-video-style", {detail: { width:B.domElement.clientWidth,height: B.domElement.clientHeight}}))
 window.addEventListener('arjs-video-loaded', (e) => {
-    // const videoEl = e.detail.component
     hasInit.value = true
     const main = parent.window.document.getElementsByClassName('main')[0]
     if (main) main.parentNode.removeChild(main)
+    // const videoEl = e.detail.component
     // console.log(videoEl);
     // videoEl.play()
     // function doPlay() {

@@ -1,5 +1,5 @@
 <template>
-  <a-scene embedded device-orientation-permission-ui="enabled: false" renderer="antialias: true;
+  <a-scene ref="scene" embedded device-orientation-permission-ui="enabled: false" renderer="antialias: true;
                    colorManagement: true;
                    sortObjects: true;
                    physicallyCorrectLights: true;
@@ -25,19 +25,17 @@
 
 <script setup>
 import showContent from "../../components/showContent.vue";
-import {ref ,reactive,watch ,watchEffect ,nextTick} from "vue";
+import {ref ,onMounted } from "vue";
 const currentModel = ref([...top.currentModel.value])
 const showBackground = ref(top.showBackground.value)
 const showAxes = ref(top.showAxes.value)
-// const books = reactive([parent.window.currentModel])
-// const books1 = parent.window.currentModel
-// console.log(currentModel,books,books1);
-// watch(currentModel,()=>{
-//   alert(123)
-// })
-// top.watchEffect(() => {
-// currentModel.value = parent.window.currentModel.value
-// } )
+const scene = ref()
+onMounted(()=>{
+  scene.value.addEventListener('loaded', ()=>{
+    const main = parent.window.document.getElementsByClassName('main')[0]
+    if (main) main.parentNode.removeChild(main)
+  });
+})
  window.addEventListener('message', (event) => {
       if(!event.data || event.data.type==="webpackOk") return
       const {currentModel:val,showBackground:showBackground1,showAxes:showAxes1} = event.data

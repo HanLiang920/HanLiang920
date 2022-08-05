@@ -8,7 +8,7 @@
     <modeChoose v-model:mode="mode"></modeChoose>
     <div style="width:14%;height:0"></div>
   </div>
-  <a-drawer v-model:visible="visible" title="" placement="left" width="55%">
+  <a-drawer v-model:visible="visible" :closable="false" title="" placement="left" width="55%">
     <div class="drawer-content">
       <div class="drawer-content-menu">
         <div style="overflow: auto;height: 100%;">
@@ -107,12 +107,12 @@ import modeChoose from "../../components/modeChoose.vue";
 import BaseName from "../../components/BaseName.vue";
 import { ref, watchEffect ,computed} from "vue";
 const version = computed(() => process.env.version) 
-const mode = ref("AR");
+const mode = ref("模型");
 const visible = ref(false);
 const showBackground = ref(true);
 const showAxes = ref(true);
-const currentModel = ref(["C60"]);
-const openKeys = ref(['分子模型']);
+const currentModel = ref(["H2O"]);
+const openKeys = ref(['分子模型','无机化合物']);
 const modelList = ref([
   { name: "H2O" },
   { name: "NH3" },

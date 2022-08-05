@@ -8,8 +8,8 @@ defineEmits(['update:mode'])
 
 <template>
     <div class="mode-choose">
-        <div :class="{ 'mode-choose-item': true, choose: mode == 'AR' }" @click="$emit('update:mode', 'AR')">AR</div>
         <div :class="{ 'mode-choose-item': true, choose: mode != 'AR' }" @click="$emit('update:mode', '模型')">模型</div>
+        <div :class="{ 'mode-choose-item': true, choose: mode == 'AR' }" @click="$emit('update:mode', 'AR')">AR</div>
     </div>
 </template>
 

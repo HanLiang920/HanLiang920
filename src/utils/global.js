@@ -241,54 +241,54 @@ function setObjectToMove(){
   });
 
 
-const str1 = `    1.4390  -41.0180   20.2760 S
-2.9790  -39.7200   20.5980 S
-2.0630  -42.4460   18.9460 S
-3.9500  -40.2780   22.3120 S
-5.6020  -41.3490   21.7570 S
-2.5980  -44.0970   20.0290 S
-4.6380  -44.1210   20.1840 S
-5.1780  -43.3370   21.9920 S`
+// const str1 = `    1.4390  -41.0180   20.2760 S
+// 2.9790  -39.7200   20.5980 S
+// 2.0630  -42.4460   18.9460 S
+// 3.9500  -40.2780   22.3120 S
+// 5.6020  -41.3490   21.7570 S
+// 2.5980  -44.0970   20.0290 S
+// 4.6380  -44.1210   20.1840 S
+// 5.1780  -43.3370   21.9920 S`
 
-const str2 = `  1  2
-2  4
-4  5
-5  8
-8  7
-7  6
-6  3
-3  1`
+// const str2 = `  1  2
+// 2  4
+// 4  5
+// 5  8
+// 8  7
+// 7  6
+// 6  3
+// 3  1`
 
- function getatoms (str){
-    const atoms = []
-    str.split('\n').forEach((it,i)=>{
-      const [x,y,z,type] = it.split(" ").filter(it=>it!=='')
-      atoms.push({
-        id: i+1,
-        symbol: type,
-        cartCoords: `${x} ${y} ${z}`
-      }) 
-    })
-    return atoms
- }
+//  function getatoms (str){
+//     const atoms = []
+//     str.split('\n').forEach((it,i)=>{
+//       const [x,y,z,type] = it.split(" ").filter(it=>it!=='')
+//       atoms.push({
+//         id: i+1,
+//         symbol: type,
+//         cartCoords: `${x} ${y} ${z}`
+//       }) 
+//     })
+//     return atoms
+//  }
 
- function getbonds(str,atoms){
-    const length = atoms.length
-    const bonds = []
-    str.split('\n').forEach((it,i)=>{
-        const [x,y] = it.split(" ").filter(it=>it!=='')
-        bonds.push({
-            id: length+i+1,
-            bondAtom1: x,
-            bondAtom2: y,
-            bondOrderType: "0",
-            bondOrder: "1",
-            color:'#fff'
-          })
-    })
-    return bonds
- }
+//  function getbonds(str,atoms){
+//     const length = atoms.length
+//     const bonds = []
+//     str.split('\n').forEach((it,i)=>{
+//         const [x,y] = it.split(" ").filter(it=>it!=='')
+//         bonds.push({
+//             id: length+i+1,
+//             bondAtom1: x,
+//             bondAtom2: y,
+//             bondOrderType: "0",
+//             bondOrder: "1",
+//             color:'#fff'
+//           })
+//     })
+//     return bonds
+//  }
 
- const atom = getatoms(str1)
- const bond = getbonds(str2,atom)
-console.log(JSON.stringify({atom,bond}));
+//  const atom = getatoms(str1)
+//  const bond = getbonds(str2,atom)
+// console.log(JSON.stringify({atom,bond}));

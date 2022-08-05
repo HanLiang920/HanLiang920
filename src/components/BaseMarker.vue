@@ -12,14 +12,14 @@ onMounted(() => {
   const marker = el.value
   marker.addEventListener('markerFound', (e) => {
     showData[type] = true
-    console.log(showData,showData.value);
+    //console.log(showData,showData.value);
     isShow.value = true
   });
 
   marker.addEventListener('markerLost', () => {
    isShow.value = false
    delete showData[type]
-   console.log(showData,showData.value);
+  //console.log(showData,showData.value);
   })
 })
 </script>

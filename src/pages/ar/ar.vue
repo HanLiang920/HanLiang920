@@ -48,25 +48,35 @@ const showData = reactive({});
 //         console.log(document.querySelector('video').style.width);
 //     },0)
 // });
+
+window.addEventListener('arjs-video-style', (e) => {
+    const { width, height } = e.detail
+    const canvas = window.document.getElementsByClassName('a-canvas')[0]
+    canvas.style.cssText = `position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: ${width}px;height:  ${height}px;`
+
+});
+// window.dispatchEvent(new CustomEvent("arjs-video-style", {detail: { width:B.domElement.clientWidth,height: B.domElement.clientHeight}}))
 window.addEventListener('arjs-video-loaded', (e) => {
-    const videoEl = e.detail.component
+    // const videoEl = e.detail.component
     hasInit.value = true
     const main = parent.window.document.getElementsByClassName('main')[0]
     if (main) main.parentNode.removeChild(main)
-
-    function doPlay() {
-        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-            videoEl.play()
-        })
-    }
-    if (window.WeixinJSBridge) {
-        doPlay()
-    }
-    else {
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            doPlay()
-        }, false);
-    }
+    // console.log(videoEl);
+    // videoEl.play()
+    // function doPlay() {
+    //     videoEl.play()
+    //     WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+    //         videoEl.play()
+    //     })
+    // }
+    // if (window.WeixinJSBridge) {
+    //     doPlay()
+    // }
+    // else {
+    //     document.addEventListener("WeixinJSBridgeReady", function () {
+    //         doPlay()
+    //     }, false);
+    // }
 
 });
 

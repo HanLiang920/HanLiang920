@@ -19,13 +19,13 @@
               <a-sub-menu key="无机化合物">
                 <template #title>无机化合物</template>
                 <a-menu-item v-for="it in modelList" :key="it.name">
-                  <BaseName :name="it.name"/>
+                  <BaseName :name="it.name" />
                 </a-menu-item>
               </a-sub-menu>
               <a-sub-menu key="有机化合物">
                 <template #title>有机化合物</template>
                 <a-menu-item v-for="it in modelList2" :key="it.name">
-                  <BaseName :name="it.name"/>
+                  <BaseName :name="it.name" />
                 </a-menu-item>
               </a-sub-menu>
 
@@ -98,6 +98,7 @@
     style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
   <iframe v-if="mode === '模型'" ref="modelEl" src="./model.html?v=1.0"
     style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
+  <a-spin v-if="!loaded" size="large" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" />
 </template>
 
 <script setup>
@@ -105,14 +106,15 @@
 import { MenuOutlined, CheckOutlined, CloseOutlined } from "@ant-design/icons-vue";
 import modeChoose from "../../components/modeChoose.vue";
 import BaseName from "../../components/BaseName.vue";
-import { ref, watchEffect ,computed} from "vue";
-const version = computed(() => process.env.version) 
+import { ref, watchEffect,watch ,computed } from "vue";
+const version = computed(() => process.env.version)
 const mode = ref("模型");
+const loaded = ref(false);
 const visible = ref(false);
 const showBackground = ref(true);
 const showAxes = ref(true);
 const currentModel = ref(["H2O"]);
-const openKeys = ref(['分子模型','无机化合物']);
+const openKeys = ref(['分子模型', '无机化合物']);
 const modelList = ref([
   { name: "H2O" },
   { name: "NH3" },
@@ -137,6 +139,14 @@ const modelEl = ref()
 watchEffect(() => {
   if (modelEl && modelEl.value) modelEl.value.contentWindow.postMessage({ currentModel: currentModel.value[0], showBackground: showBackground.value, showAxes: showAxes.value })
 })
+watch(mode,()=>{
+  loaded.value = false
+})
+window.addEventListener('message', (event) => {
+  if (event.data === 'loaded') {
+    loaded.value = true
+  }
+})
 </script>
 
 <style lang="scss">
@@ -159,7 +169,7 @@ watchEffect(() => {
   top: 10px;
   right: 0;
   left: 0;
-  height: 50px;
+  height: 45px;
   color: #e3e3e3;
   font-size: 16px;
   z-index: 1;

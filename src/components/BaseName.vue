@@ -15,7 +15,7 @@ const nameList = computed(() => {
 </script>
 
 <template>
-    <span>
+    <span class="base-name">
         <template v-for="(it,i) in nameList" :key="i">
             <template v-if="it.isNumber"><sub>{{it.text}}</sub></template>
             <template v-else>{{it.text}}</template>
@@ -24,4 +24,7 @@ const nameList = computed(() => {
 </template>
 
 <style scoped>
+.base-name{
+    font-style: italic;
+}
 </style>

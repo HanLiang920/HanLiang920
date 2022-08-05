@@ -34,6 +34,7 @@ const hasInit = ref(false)
 const showData = reactive({});
 
 window.addEventListener('arjs-video-loaded', (e) => {
+    parent.postMessage('loaded')
     hasInit.value = true
     const main = parent.window.document.getElementsByClassName('main')[0]
     if (main) main.parentNode.removeChild(main)
@@ -86,10 +87,11 @@ body {
 .qr-scanner {
     background-size: 3rem 3rem;
     background-position: -1rem -1rem;
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .qr-scanner .box {

@@ -5,9 +5,7 @@
                    physicallyCorrectLights: true;
                    logarithmicDepthBuffer: true;
                    maxCanvasWidth: -1;
-                   maxCanvasHeight: -1;" vr-mode-ui="enabled: false" :style="{
-                        background: showBackground?'linear-gradient(200deg, #f4efef, #e3eeff)':''
-                   }">
+                   maxCanvasHeight: -1;" vr-mode-ui="enabled: false">
 
 
     <showContent v-if="currentModel[0]" :type="currentModel[0]" :showAxes="showAxes" :key="currentModel[0]" />
@@ -27,21 +25,19 @@
 import showContent from "../../components/showContent.vue";
 import {ref ,onMounted } from "vue";
 const currentModel = ref([...top.currentModel.value])
-const showBackground = ref(top.showBackground.value)
 const showAxes = ref(top.showAxes.value)
 const scene = ref()
 onMounted(()=>{
   scene.value.addEventListener('loaded', ()=>{
     parent.postMessage('loaded')
-    const main = parent.window.document.getElementsByClassName('main')[0]
-    if (main) main.parentNode.removeChild(main)
+   const main = parent.window.document.getElementsByClassName('main')[0]
+   if (main) main.parentNode.removeChild(main)
   });
 })
  window.addEventListener('message', (event) => {
       if(!event.data || event.data.type==="webpackOk") return
-      const {currentModel:val,showBackground:showBackground1,showAxes:showAxes1} = event.data
+      const {currentModel:val,showAxes:showAxes1} = event.data
       if(val) currentModel.value = [val]
-      showBackground.value = showBackground1
       showAxes.value = showAxes1
     })
 </script>

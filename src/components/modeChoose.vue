@@ -1,15 +1,23 @@
 <script setup>
-
+import { ref } from "vue";
+const left = ref("0");
 const { mode } = defineProps({
     mode: String
 });
-defineEmits(['update:mode'])
+const emit =  defineEmits(['update:mode'])
+const modeClick = (type)=>{
+    if(type===mode.value) return
+    left.value = type !== 'AR' ?'0':'100%'
+    setTimeout(()=>{
+        emit('update:mode', type)
+    },0)
+}
 </script>
 
 <template>
-    <div class="mode-choose" :style="{'--groove-left':mode !== 'AR'?'0':'50%'}">
-        <div :class="{ 'mode-choose-item': true, choose: mode != 'AR' }" @click="$emit('update:mode', '模型')">模型</div>
-        <div :class="{ 'mode-choose-item': true, choose: mode == 'AR' }" @click="$emit('update:mode', 'AR')">AR</div>
+    <div class="mode-choose" :style="{'--groove-left':left}">
+        <div :class="{ 'mode-choose-item': true, choose: mode != 'AR' }" @click="modeClick('模型')">模型</div>
+        <div :class="{ 'mode-choose-item': true, choose: mode == 'AR' }" @click="modeClick('AR')">AR</div>
     </div>
 </template>
 
@@ -22,14 +30,15 @@ defineEmits(['update:mode'])
     &::before {
         content: "";
         position: absolute;
-        left: var(--groove-left);
+        left: 0;
         width: 50%;
         height: 100%;
         border-radius: 15px;
-        transition: left 0.6s cubic-bezier(.17,.67,.83,.67);
+        transition: transform 0.6s cubic-bezier(0.82, 0.12, 0.18, 0.88);
         background: #141414;
         opacity: 0.8;
         z-index: 1;
+        transform: translate(var(--groove-left), 0);
     }
 
     .mode-choose-item {

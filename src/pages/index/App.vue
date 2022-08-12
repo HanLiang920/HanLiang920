@@ -149,8 +149,8 @@ window.addEventListener('message', (event) => {
     const loading = document.querySelector('#body-loading')
     if(loading) loading.querySelector('div').classList.add('animate__animated', 'animate__fadeOut')
     setTimeout(()=>{
-        if (loading) loading.style.display = 'none';
-    },1000)
+      if (loading) loading.style.display = 'none';
+    },500)
   }
 })
 </script>

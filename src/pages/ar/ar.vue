@@ -36,26 +36,6 @@ const showData = reactive({});
 window.addEventListener('arjs-video-loaded', (e) => {
     parent.postMessage('loaded')
     hasInit.value = true
-    const main = parent.window.document.getElementsByClassName('main')[0]
-    if (main) main.parentNode.removeChild(main)
-    // const videoEl = e.detail.component
-    // console.log(videoEl);
-    // videoEl.play()
-    // function doPlay() {
-    //     videoEl.play()
-    //     WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-    //         videoEl.play()
-    //     })
-    // }
-    // if (window.WeixinJSBridge) {
-    //     doPlay()
-    // }
-    // else {
-    //     document.addEventListener("WeixinJSBridgeReady", function () {
-    //         doPlay()
-    //     }, false);
-    // }
-
 });
 
 

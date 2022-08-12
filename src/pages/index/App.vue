@@ -146,6 +146,11 @@ watch(mode, () => {
 window.addEventListener('message', (event) => {
   if (event.data === 'loaded') {
     loaded.value = true
+    const loading = document.querySelector('#body-loading')
+    if(loading) loading.querySelector('div').classList.add('animate__animated', 'animate__fadeOut')
+    setTimeout(()=>{
+        if (loading) loading.style.display = 'none';
+    },1000)
   }
 })
 </script>

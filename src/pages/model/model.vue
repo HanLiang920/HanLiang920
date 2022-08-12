@@ -30,8 +30,6 @@ const scene = ref()
 onMounted(()=>{
   scene.value.addEventListener('loaded', ()=>{
     parent.postMessage('loaded')
-   const main = parent.window.document.getElementsByClassName('main')[0]
-   if (main) main.parentNode.removeChild(main)
   });
 })
  window.addEventListener('message', (event) => {

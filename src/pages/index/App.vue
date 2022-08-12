@@ -150,7 +150,7 @@ window.addEventListener('message', (event) => {
     if(loading) loading.querySelector('div').classList.add('animate__animated', 'animate__fadeOut')
     setTimeout(()=>{
       if (loading) loading.style.display = 'none';
-    },500)
+    },1000)
   }
 })
 </script>

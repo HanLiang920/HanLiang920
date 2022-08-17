@@ -1,0 +1,16 @@
+{
+    "atom": [
+        {
+            "id": "1",
+            "symbol": "type3",
+            "cartCoords": "0 0 0",
+            "opacity":0.9
+        },
+        {
+            "id": "2",
+            "symbol": "type4",
+            "cartCoords": "0 0 0"
+        }
+    ],
+    "center":"0 0 0"
+}

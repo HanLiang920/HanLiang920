@@ -2,9 +2,9 @@
 export function getc3Data(data) {
    const atom = {}
    data.atom.forEach(it => {
-      const { id, symbol, cartCoords } = it
+      const { id, symbol, cartCoords, opacity } = it
       const { x, y, z } = AFRAME.utils.coordinates.parse(cartCoords)
-      atom[id] = { symbol, x, y, z }
+      atom[id] = { symbol, x, y, z, opacity }
    });
    return { atom, bond: data.bond, center: data.center,rotation: data.rotation }
 }

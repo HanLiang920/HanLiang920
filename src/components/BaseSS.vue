@@ -24,8 +24,8 @@ const position = computed(() => {
 </script>
 
 <template>
-  <a-entity :position="position" :rotation="rotation" :scale="`${scale||0.4} ${scale||0.4} ${scale||0.4}`">
-    <a-entity :key="id" :position="`0 ${height===undefined?-3:height} 0`" geometry="primitive: zahua;" :material="`color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:${opacity||1}`"></a-entity>
+  <a-entity :position="position" :rotation="rotation" :scale="`${scale||0.5} ${scale||0.5} ${scale||0.5}`">
+    <a-entity :key="id" :position="`0 ${height===undefined?-3:height} 0`" geometry="primitive: s-s;" :material="`color: #114ccf;roughness: 0.25; metalness: 0.2;opacity:${opacity||1}`"></a-entity>
   </a-entity>
 </template>
 

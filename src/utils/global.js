@@ -17,6 +17,10 @@ window.atomInfos = {
         radius: 0.39,
         color: "#114ccf",
     },
+    type4: {
+        radius: 0.05,
+        color: "#114ccf",
+    },
     C: {
         radius: 0.43,
         color: "black",
@@ -89,6 +93,23 @@ AFRAME.registerGeometry('zahua', {
             new THREE.Vector2(1.96, 0),
             new THREE.Vector2(3.27, 2.95),
             new THREE.Vector2(0, 3),
+        );
+        const points = curve.getPoints(50);
+
+        this.geometry = new THREE.LatheGeometry(points, 30);
+    }
+});
+
+AFRAME.registerGeometry('s-s', {
+    schema: {
+    },
+
+    init: function (data) {
+        const curve = new THREE.CubicBezierCurve(
+            new THREE.Vector2(0, 0),
+            new THREE.Vector2(1, 0),
+            new THREE.Vector2(1, 2.4),
+            new THREE.Vector2(0, 2.4),
         );
         const points = curve.getPoints(50);
 

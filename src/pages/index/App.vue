@@ -1,5 +1,5 @@
 <template>
-  <div class="app" :style="{ background: showBackground ? 'linear-gradient(200deg, #f4efef, #e3eeff)' : '' }">
+  <div class="app-content">
       <div class="chem-3d-header">
       <div :style="{ width: '14%', visibility: mode == 'AR' ? 'hidden' : 'visible', cursor: 'pointer' }"
         @click="visible = true">
@@ -15,6 +15,19 @@
           <div style="overflow: auto;height: 100%;">
             <a-menu v-model:selectedKeys="currentModel" v-model:openKeys="openKeys" mode="inline"
               @click="visible = false">
+              <a-sub-menu key="共价键">
+                <template #title>共价键</template>
+                <a-sub-menu key="σ键">
+                  <template #title>σ键</template>
+                  <a-menu-item key="s-s">s-s</a-menu-item>
+                  <a-menu-item key="s-p">s-p</a-menu-item>
+                  <a-menu-item key="p-pσ">p-p σ键</a-menu-item>
+                </a-sub-menu>
+                <a-sub-menu key="π键">
+                  <template #title>π键</template>
+                  <a-menu-item key="p-pπ">p-p π键</a-menu-item>
+                </a-sub-menu>
+              </a-sub-menu>
               <a-sub-menu key="分子模型">
                 <template #title>分子模型</template>
                 <a-sub-menu key="无机化合物">
@@ -143,20 +156,33 @@ watchEffect(() => {
 watch(mode, () => {
   loaded.value = false
 })
+watch(showBackground, () => {
+  if(showBackground.value){
+    document.querySelector('body').setAttribute('style', 'background: linear-gradient(200deg, #f4efef, #e3eeff)')
+  }else{
+    document.querySelector('body').removeAttribute('style')
+  }
+})
+
 window.addEventListener('message', (event) => {
   if (event.data === 'loaded') {
     loaded.value = true
     const loading = document.querySelector('#body-loading')
-    if(loading) loading.querySelector('div').classList.add('animate__animated', 'animate__fadeOut')
+    loading.classList.add('animate__animated05', 'animate__fadeOut')
+    
     setTimeout(()=>{
-      if (loading) loading.style.display = 'none';
-    },1000)
+      loading.style.display = 'none';
+      document.querySelector('#app').classList.add('animate__animated', 'animate__fadeIn')
+    },490)
   }
 })
 </script>
 
 <style lang="scss">
-.app {
+#app{
+  opacity: 0;
+}
+#app,.app-content {
   position: absolute;
   top: 0;
   bottom: 0;

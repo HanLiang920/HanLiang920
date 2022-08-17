@@ -1,8 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
 
-const { symbol, x,y,z } = defineProps({
+const { symbol, opacity, x,y,z } = defineProps({
   symbol: String,
+  opacity: { type: Number, default: 1 },
   x: Number,
   y: Number,
   z: Number,
@@ -19,7 +20,7 @@ const position = computed(() => {
 <template>
   <a-entity
     :geometry="`primitive: sphere; radius: ${atomInfo.radius}`"
-    :material="`color: ${atomInfo.color};roughness: 0.25; metalness: 0.2`"
+    :material="`color: ${atomInfo.color};roughness: 0.25; metalness: 0.2;opacity: ${opacity}`"
     :position="position"
   >
   </a-entity>

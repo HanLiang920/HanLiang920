@@ -1,0 +1,47 @@
+{
+    "atom": [
+        {
+            "id": "1",
+            "symbol": "",
+            "cartCoords": "1.98 0 0"
+        },
+        {
+            "id": "2",
+            "symbol": "",
+            "cartCoords": "0 0 0"
+        },
+        {
+            "id": "3",
+            "symbol": "type4",
+            "cartCoords": "1.025 0 0"
+        },
+        {
+            "id": "4",
+            "symbol": "type4",
+            "cartCoords": "-1.025 0 0"
+        },
+        {
+            "id": "5",
+            "symbol": "type5",
+            "cartCoords": "1.16 0 0",
+            "opacity":0.9
+        },
+        {
+            "id": "6",
+            "symbol": "type5",
+            "cartCoords": "-1.16 0 0",
+            "opacity":0.9
+        }
+    ],
+    "bond": [
+        {
+            "id": "7",
+            "bondAtom1": "2",
+            "bondAtom2": "1",
+            "ppσ":true,
+            "opacity":0.9
+
+        }
+    ],
+    "center":"0 0 0"
+}

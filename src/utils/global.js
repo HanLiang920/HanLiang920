@@ -21,6 +21,10 @@ window.atomInfos = {
         radius: 0.05,
         color: "#114ccf",
     },
+    type5: {
+        radius: 0.16,
+        color: "#114ccf",
+    },
     C: {
         radius: 0.43,
         color: "black",
@@ -110,6 +114,40 @@ AFRAME.registerGeometry('s-s', {
             new THREE.Vector2(1, 0),
             new THREE.Vector2(1, 2.4),
             new THREE.Vector2(0, 2.4),
+        );
+        const points = curve.getPoints(50);
+
+        this.geometry = new THREE.LatheGeometry(points, 30);
+    }
+});
+
+AFRAME.registerGeometry('s-p', {
+    schema: {
+    },
+
+    init: function (data) {
+        const curve = new THREE.CubicBezierCurve(
+            new THREE.Vector2(0, 0),
+            new THREE.Vector2(0.6, -0.2),
+            new THREE.Vector2(1.23, 1.9),
+            new THREE.Vector2(0, 1.98),
+        );
+        const points = curve.getPoints(50);
+
+        this.geometry = new THREE.LatheGeometry(points, 30);
+    }
+});
+
+AFRAME.registerGeometry('p-pσ', {
+    schema: {
+    },
+
+    init: function (data) {
+        const curve = new THREE.CubicBezierCurve(
+            new THREE.Vector2(0, 0),
+            new THREE.Vector2(0.8, 0.15),
+            new THREE.Vector2(0.8, 1.9),
+            new THREE.Vector2(0, 2.05),
         );
         const points = curve.getPoints(50);
 

@@ -28,14 +28,27 @@
     </template>
     <template v-else-if="type==='s-s'">
         <a-entity :key="key">
-          <fragment type="s-s1" :showAxes="false" position="-2 1 0" animation="property: position; to: -0.15 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"
-          />
-          <fragment type="s-s1" :showAxes="false" position="2 1 0" animation="property: position; to: 0.15 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-s1" :showAxes="false" position="-2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-s1" :showAxes="false" position="2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
           <fragment type="s-s" animation="property: position; to: 0 1 0; dur: 1; easing: linear;delay: 2100" :showAxes="showAxes" position="0 9999 0" />
         </a-entity>
     </template>
+    <template v-else-if="type==='s-p'">
+        <a-entity :key="key">
+          <fragment type="s-s1" :showAxes="false" position="-2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-p1" :showAxes="false" position="2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-p" animation="property: position; to: 0 1 0; dur: 1; easing: linear;delay: 2100" :showAxes="showAxes" position="0 9999 0"  />
+        </a-entity>
+    </template>
+    <template v-else-if="type==='p-pσ'">
+        <a-entity :key="key">
+          <fragment type="s-p1" :showAxes="false" position="-2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-p1" :showAxes="false" position="2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="p-pσ" animation="property: position; to: 0 1 0; dur: 1; easing: linear;delay: 2100" :showAxes="showAxes" position="0 9999 0"  />
+        </a-entity>
+    </template>
     <fragment v-else :type="type" :showAxes="showAxes" :key="type"  position="0 1.2 0" />
-    <div v-if="['sp','sp2','sp3','s-s'].includes(type)" class="replay" @click="key++"><reload-outlined :class="{rotatefresh:true,rotatefresh1:key&&key%2===0,rotatefresh2:key&&key%2===1}" /></div>
+    <div v-if="['sp','sp2','sp3','s-s','s-p','p-pσ'].includes(type)" class="replay" @click="key++"><reload-outlined :class="{rotatefresh:true,rotatefresh1:key&&key%2===0,rotatefresh2:key&&key%2===1}" /></div>
 </template>
 
 <script setup>
@@ -53,8 +66,8 @@ const key = ref(0)
 <style lang="scss">
 .replay{
   position: fixed;
-  bottom: 45px;
-  right: 45px;
+  bottom: 5%;
+  right: 5%;
   z-index: 10;
   width: 50px;
   height: 50px;

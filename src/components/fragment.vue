@@ -4,6 +4,8 @@ import BaseBond from './BaseBond.vue'
 import BaseElectronPair from './BaseElectronPair.vue'
 import BaseZahua from './BaseZahua.vue'
 import BaseSS from './BaseSS.vue'
+import BaseSP from './BaseSP.vue'
+import BasePPσ from './BasePPσ.vue'
 import { reactive, computed } from "vue";
 
 const { type } = defineProps({
@@ -24,6 +26,8 @@ const fragment = reactive(window.c3Data[type]);
       <BaseElectronPair v-if="bond.isElectronPair===true" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
       <BaseZahua v-else-if="bond.zahua===true" :height="bond.height" :scale="bond.scale" :opacity="bond.opacity" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/> 
       <BaseSS v-else-if="bond.ss===true" :height="bond.height" :scale="bond.scale" :opacity="bond.opacity" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
+      <BaseSP v-else-if="bond.sp===true" :height="bond.height" :scale="bond.scale" :opacity="bond.opacity" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
+      <BasePPσ v-else-if="bond.ppσ===true" :height="bond.height" :scale="bond.scale" :opacity="bond.opacity" :bondAtom1="fragment.atom[bond.bondAtom1]" :bondAtom2="fragment.atom[bond.bondAtom2]" :id="type+bond.id"/>
       <BaseBond v-else :bondAtom1="fragment.atom[bond.bondAtom1]"
         :bondAtom2="fragment.atom[bond.bondAtom2]" :bondOrderType="bond.bondOrderType" :bondOrder="bond.bondOrder" :color="bond.color"/>
     </template>

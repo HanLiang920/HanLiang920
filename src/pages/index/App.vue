@@ -110,7 +110,7 @@
     </a-drawer>
     <iframe v-if="mode === 'AR'" :src="`./ar.html?v=${version}`"
       style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
-    <iframe v-if="mode === '模型'" ref="modelEl" src="./model.html?v=1.0"
+    <iframe v-if="mode === '模型'" ref="modelEl" :src="`./model.html?v=${version}`"
       style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
     <a-spin v-if="!loaded" size="large" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" />
   </div>

@@ -47,14 +47,28 @@
           <fragment type="p-pσ" animation="property: position; to: 0 1 0; dur: 1; easing: linear;delay: 2100" :showAxes="showAxes" position="0 9999 0"  />
         </a-entity>
     </template>
+      <template v-else-if="type==='p-pπ'">
+        <a-entity :key="key">
+          <fragment type="s-p1" :showAxes="false" position="-2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-p1" :showAxes="false" position="2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <a-entity use-rotate shadow animation="property: position; to: 0 1 0; dur: 1; easing: linear;delay: 2100" :showAxes="showAxes" position="0 9999 0">
+            <BaseAtom symbol="type4" :x="0.7" :y="0" :z="0"/>
+            <BaseAtom symbol="type4" :x="-0.7" :y="0" :z="0"/>
+            <a-entity  gltf-model="#pp" scale="4 4 4" rotation="0 0 0" position="0 0.44 0"></a-entity>
+            <a-entity  gltf-model="#pp" scale="4 4 4" rotation="0 0 180" position="0 -0.44 0"></a-entity>
+            <a-plane color="#CCC" height="5" width="5" rotation="-90 0 0" material="opacity: 0.5"></a-plane>
+          </a-entity>
+        </a-entity>
+    </template>
     <fragment v-else :type="type" :showAxes="showAxes" :key="type"  position="0 1.2 0" />
-    <div v-if="['sp','sp2','sp3','s-s','s-p','p-pσ'].includes(type)" class="replay" @click="key++"><reload-outlined :class="{rotatefresh:true,rotatefresh1:key&&key%2===0,rotatefresh2:key&&key%2===1}" /></div>
+    <div v-if="['sp','sp2','sp3','s-s','s-p','p-pσ','p-pπ'].includes(type)" class="replay" @click="key++"><reload-outlined :class="{rotatefresh:true,rotatefresh1:key&&key%2===0,rotatefresh2:key&&key%2===1}" /></div>
 </template>
 
 <script setup>
 import { ReloadOutlined } from "@ant-design/icons-vue";
 import { ref } from "vue";
 import fragment from "./fragment.vue";
+import BaseAtom from "./BaseAtom.vue";
 const { type } = defineProps({
   type: String,
   showAxes:{ type: Boolean, default: true }

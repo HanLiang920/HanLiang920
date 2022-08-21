@@ -20,7 +20,7 @@ module.exports = defineConfig({
       .loader('vue-loader')
       .tap(options => {
         options.compilerOptions = {
-          isCustomElement: (tag) => ['a-scene', 'a-sky','a-entity', 'a-cylinder', 'a-camera','a-marker','a-plane'].includes(tag)
+          isCustomElement: (tag) => ['a-scene', 'a-sky','a-entity', 'a-cylinder', 'a-camera','a-marker','a-plane','a-assets','a-asset-item'].includes(tag)
         };
         return options;
       });

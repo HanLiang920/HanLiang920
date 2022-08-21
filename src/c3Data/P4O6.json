@@ -1,0 +1,142 @@
+{
+  "atom": [
+    {
+      "id": 1,
+      "symbol": "P",
+      "cartCoords": "30.6946 44.3255 51.9034"
+    },
+    {
+      "id": 2,
+      "symbol": "P",
+      "cartCoords": "31.3226 43.9304 54.9238"
+    },
+    {
+      "id": 3,
+      "symbol": "P",
+      "cartCoords": "33.4297 45.2678 53.0485"
+    },
+    {
+      "id": 4,
+      "symbol": "P",
+      "cartCoords": "30.8147 46.7924 53.7953"
+    },
+    {
+      "id": 5,
+      "symbol": "O",
+      "cartCoords": "30.6522 43.5206 53.4080"
+    },
+    {
+      "id": 6,
+      "symbol": "O",
+      "cartCoords": "32.8874 44.2930 54.3426"
+    },
+    {
+      "id": 7,
+      "symbol": "O",
+      "cartCoords": "30.7517 45.5398 54.9548"
+    },
+    {
+      "id": 8,
+      "symbol": "O",
+      "cartCoords": "30.2374 45.8647 52.4844"
+    },
+    {
+      "id": 9,
+      "symbol": "O",
+      "cartCoords": "32.3772 44.6141 51.8736"
+    },
+    {
+      "id": 10,
+      "symbol": "O",
+      "cartCoords": "32.4735 46.6304 53.4242"
+    }
+  ],
+  "bond": [
+    {
+      "id": 11,
+      "bondAtom1": "1",
+      "bondAtom2": "5",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 12,
+      "bondAtom1": "1",
+      "bondAtom2": "8",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 13,
+      "bondAtom1": "1",
+      "bondAtom2": "9",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 14,
+      "bondAtom1": "2",
+      "bondAtom2": "5",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 15,
+      "bondAtom1": "2",
+      "bondAtom2": "6",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 16,
+      "bondAtom1": "2",
+      "bondAtom2": "7",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 17,
+      "bondAtom1": "3",
+      "bondAtom2": "6",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 18,
+      "bondAtom1": "3",
+      "bondAtom2": "9",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 19,
+      "bondAtom1": "3",
+      "bondAtom2": "10",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 20,
+      "bondAtom1": "4",
+      "bondAtom2": "7",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 21,
+      "bondAtom1": "4",
+      "bondAtom2": "8",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    },
+    {
+      "id": 22,
+      "bondAtom1": "4",
+      "bondAtom2": "10",
+      "bondOrderType": "0",
+      "bondOrder": "1"
+    }
+  ],
+  "center":"-30.6946 -44.3255 -51.9034",
+  "rotation":"0 0 0"
+}

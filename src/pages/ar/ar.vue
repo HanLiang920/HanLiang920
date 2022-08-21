@@ -8,10 +8,10 @@
     maxCanvasHeight: -1 ;`"
         :arjs="`sourceType: webcam;sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_5_5;cameraParametersUrl:./data/camera_para.dat`"
         vr-mode-ui="enabled: false">
-        <BaseMarker id="0" type="4+0" :showData="showData" />
-        <BaseMarker id="1" type="3+1" :showData="showData" />
-        <BaseMarker id="2" type="H2O" :showData="showData" />
-        <BaseMarker id="3" type="NH3" :showData="showData" />
+        <a-assets>
+            <a-asset-item id="pp" src="/data/pp.gltf"></a-asset-item>
+        </a-assets>
+        <BaseMarker v-for="(type,i) in list" :key="i" :id="i" :type="type" :showData="showData" />
         <a-entity camera look-controls="enabled: false" object-controls="target: 0 0 0; initialPosition: 0 0 0">
         </a-entity>
         <a-entity light="type: ambient; intensity: 1.8;"></a-entity>
@@ -32,6 +32,7 @@ import { ref, reactive, computed } from "vue";
 import BaseMarker from "../../components/BaseMarker.vue";
 const hasInit = ref(false)
 const showData = reactive({});
+const list = ref(['4+0','3+1','H2O','NH3'])
 
 window.addEventListener('arjs-video-loaded', (e) => {
     parent.postMessage('loaded')

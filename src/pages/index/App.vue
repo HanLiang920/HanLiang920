@@ -135,6 +135,8 @@ const modelList = ref([
   { name: "NH3" },
   { name: "CO2" },
   { name: "P4" },
+  { name: "P4O6" },
+  { name: "P4O10" },
   { name: "S8" },
 ])
 const modelList2 = ref([

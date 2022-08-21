@@ -49,8 +49,8 @@
     </template>
       <template v-else-if="type==='p-pπ'">
         <a-entity :key="key">
-          <fragment type="s-p1" :showAxes="false" position="-2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
-          <fragment type="s-p1" :showAxes="false" position="2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-p1" :showAxes="false" rotation="0 0 90" position="-2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
+          <fragment type="s-p1" :showAxes="false" rotation="0 0 90" position="2 1 0" animation="property: position; to: 0 1 0; dur: 2000; easing: linear;" animation__1="property: position; to: 0 9999 0; dur: 1; delay: 2100"/>
           <a-entity use-rotate shadow animation="property: position; to: 0 1 0; dur: 1; easing: linear;delay: 2100" :showAxes="showAxes" position="0 9999 0">
             <BaseAtom symbol="type4" :x="0.7" :y="0" :z="0"/>
             <BaseAtom symbol="type4" :x="-0.7" :y="0" :z="0"/>

@@ -105,12 +105,12 @@
       "bondAtom1": "7",
       "bondAtom2": "8",
       "bondOrderType": "15",
-      "bondOrder": "1"
+      "bondOrder": "2"
     },
     {
       "id": "20",
-      "bondAtom1": "8",
-      "bondAtom2": "9",
+      "bondAtom1": "9",
+      "bondAtom2": "8",
       "bondOrderType": "15",
       "bondOrder": "2"
     },
@@ -126,7 +126,7 @@
       "bondAtom1": "5",
       "bondAtom2": "10",
       "bondOrderType": "15",
-      "bondOrder": "2"
+      "bondOrder": "1"
     },
     {
       "id": "23",

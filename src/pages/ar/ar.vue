@@ -32,7 +32,7 @@ import { ref, reactive, computed } from "vue";
 import BaseMarker from "../../components/BaseMarker.vue";
 const hasInit = ref(false)
 const showData = reactive({});
-const list = ref(['4+0','3+1','H2O','NH3'])
+const list = ref(['4+0','3+1','H2O','NH3','CH4','CO2','P4','P4O6','P4O10','S8','CH2O','C2H4','C3H8','C2H4','C2H2','2+0','2+1','3+0','2+2','s','px','sp','sp2','sp3','s-s','s-p','p-pσ','p-pπ','py','pz','C60','C6H12'])
 
 window.addEventListener('arjs-video-loaded', (e) => {
     parent.postMessage('loaded')

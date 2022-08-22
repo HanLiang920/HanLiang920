@@ -23,7 +23,7 @@ const position = computed(() => {
 <template>
   <a-entity :position="position" :rotation="rotation" scale="0.6 0.6 0.6" >
     <a-entity :key="id" position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
-    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;easing: linear">
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear; delay: 10">
       <a-entity position="0 0 0" animation="property: position; to: 0.3 -1.25 0; dur: 10;">
         <a-sphere position="0 0 0" color="red" radius="0.13" roughness="0.25" metalness="0.2"></a-sphere>
       </a-entity>

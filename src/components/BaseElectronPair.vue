@@ -23,8 +23,10 @@ const position = computed(() => {
 <template>
   <a-entity :position="position" :rotation="rotation" scale="0.6 0.6 0.6" >
     <a-entity :key="id" position="0 -1.91 0" geometry="primitive: electronPair;" material="color: yellow;roughness: 0.25; metalness: 0.2;opacity:0.5"></a-entity>
-    <a-entity geometry="primitive: sphere; radius: 0.13" material="color: red;roughness: 0.25; metalness: 0.2" position="0.3 -1.25 0" pivot="-0.26 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;easing: linear"></a-entity>
-    <a-entity geometry="primitive: sphere; radius: 0.13" material="color: red;roughness: 0.25; metalness: 0.2" position="-0.3 -1.25 0" pivot="0.26 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000;easing: linear"></a-entity>
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000;easing: linear">
+      <a-entity geometry="primitive: sphere; radius: 0.13" material="color: red;roughness: 0.25; metalness: 0.2" position="0.3 -1.25 0"></a-entity>
+      <a-entity geometry="primitive: sphere; radius: 0.13" material="color: red;roughness: 0.25; metalness: 0.2" position="-0.3 -1.25 0"></a-entity>
+    </a-entity>
   </a-entity>
   
 </template>

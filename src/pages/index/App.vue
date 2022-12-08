@@ -1,6 +1,6 @@
 <template>
   <div class="app-content">
-      <div class="chem-3d-header">
+    <div class="chem-3d-header">
       <div :style="{ width: '14%', visibility: mode == 'AR' ? 'hidden' : 'visible', cursor: 'pointer' }"
         @click="visible = true">
         <menu-outlined />
@@ -108,17 +108,30 @@
       </div>
 
     </a-drawer>
+
+    
+    <div v-if="currentInfo.name" class="info" @click="showInfo"><info-outlined /></div>
+    <a-modal v-model:visible="visibleInfo" :title="currentInfo.name" :centered="true" width="660px" :mask="false"
+      :destroyOnClose="true" :footer="null">
+      <div>{{ currentInfo.text }}</div>
+      <div style="margin-top: 15px;position: relative;">
+        <iframe ref="videoIframe" style="" :src="currentInfo.video" scrolling="no" border="0" frameborder="no"
+          framespacing="0" allowfullscreen="true"> </iframe>
+      </div>
+    </a-modal>
+
+
     <iframe v-if="mode === 'AR'" :src="`./ar.html?v=${version}`"
       style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
     <iframe v-if="mode === '模型'" ref="modelEl" :src="`./model.html?v=${version}`"
       style="border:none;width: 100%;height: 100%;position: absolute;top: 0;"></iframe>
-    <a-spin v-if="!loaded" size="large" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" />
+    <a-spin v-if="!loaded" size="large"
+      style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" />
   </div>
 </template>
 
 <script setup>
-
-import { MenuOutlined, CheckOutlined, CloseOutlined } from "@ant-design/icons-vue";
+import { MenuOutlined, CheckOutlined, CloseOutlined, InfoOutlined } from "@ant-design/icons-vue";
 import modeChoose from "../../components/modeChoose.vue";
 import BaseName from "../../components/BaseName.vue";
 import { ref, watchEffect, watch, computed } from "vue";
@@ -126,9 +139,11 @@ const version = computed(() => process.env.version)
 const mode = ref("模型");
 const loaded = ref(false);
 const visible = ref(false);
+const visibleInfo = ref(false);
+const isPlay = ref(false);
 const showBackground = ref(true);
 const showAxes = ref(true);
-const currentModel = ref(["H2O"]);
+const currentModel = ref(["CH4"]);
 const openKeys = ref(['分子模型', '无机化合物']);
 const modelList = ref([
   { name: "H2O" },
@@ -151,7 +166,31 @@ const modelList2 = ref([
 ]);
 window.currentModel = currentModel
 window.showAxes = showAxes
+const dataInfos = {
+  CH4: {
+    name: '甲烷',
+    text: '甲烷，化学式CH4，是最简单的烃，由一个碳和四个氢原子通过sp3杂化的方式组成，因此甲烷分子的结构为正四面体结构，四个键的键长相同键角相等。',
+    video: '//player.bilibili.com/player.html?aid=77751294&bvid=BV1HJ411z7ii&cid=133016052&page=1'
+  },
+  sp3:{
+    name: 'sp3杂化轨道',
+    text: 'π键指两个p轨道垂直于键轴以“肩并肩”方式重叠所形成的化学键。形成π键时，原子轨道的重叠部分对等地分布在包括键轴在内的平面上、下两侧，形状相同，符号相反，呈镜面反对称。',
+    video: '//player.bilibili.com/player.html?aid=540695830&bvid=BV1Hi4y147rk&cid=192227143&page=1'
+  }
+}
 const modelEl = ref()
+const videoIframe = ref()
+const showInfo = () => {
+  visibleInfo.value = true
+  setTimeout(()=>{
+    videoIframe.value.onload = ()=> {
+
+     };
+  },0)
+}
+const play = () =>{
+
+}
 watchEffect(() => {
   if (modelEl && modelEl.value) modelEl.value.contentWindow.postMessage({ currentModel: currentModel.value[0], showAxes: showAxes.value })
 })
@@ -159,11 +198,15 @@ watch(mode, () => {
   loaded.value = false
 })
 watch(showBackground, () => {
-  if(showBackground.value){
+  if (showBackground.value) {
     document.querySelector('body').setAttribute('style', 'background: linear-gradient(200deg, #f4efef, #e3eeff)')
-  }else{
+  } else {
     document.querySelector('body').removeAttribute('style')
   }
+})
+
+const currentInfo = computed(() => {
+  return dataInfos[currentModel.value[0]] || {}
 })
 
 window.addEventListener('message', (event) => {
@@ -171,20 +214,22 @@ window.addEventListener('message', (event) => {
     loaded.value = true
     const loading = document.querySelector('#body-loading')
     loading.classList.add('animate__animated05', 'animate__fadeOut')
-    
-    setTimeout(()=>{
+
+    setTimeout(() => {
       loading.style.display = 'none';
       document.querySelector('#app').classList.add('animate__animated', 'animate__fadeIn')
-    },490)
+    }, 490)
   }
 })
 </script>
 
 <style lang="scss">
-#app{
+#app {
   opacity: 0;
 }
-#app,.app-content {
+
+#app,
+.app-content {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -244,6 +289,33 @@ window.addEventListener('message', (event) => {
     justify-content: space-between;
     height: 40px;
   }
+}
+
+.info {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+  transition: color 0.3s;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ant-modal-content {
+  backdrop-filter: blur(6px);
+  background-color: rgb(255 255 255 / 60%);
+}
+
+.ant-modal-header {
+  background-color: unset;
+  border-bottom: 1px solid rgb(240 240 240 / 60%);
 }
 </style>
 

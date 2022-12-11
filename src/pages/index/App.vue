@@ -110,13 +110,27 @@
     </a-drawer>
 
     
-    <div v-if="currentInfo.name" class="info" @click="showInfo"><info-outlined /></div>
-    <a-modal v-model:visible="visibleInfo" :title="currentInfo.name" :centered="true" width="660px" :mask="false"
+    <div v-if="mode === '模型'&&currentInfo.name" class="info" @click="showInfo"><info-outlined /></div>
+    <a-modal class="visibleInfo" v-model:visible="visibleInfo" :title="currentInfo.name" :centered="true" width="660px" :mask="false"
       :destroyOnClose="true" :footer="null">
       <div>{{ currentInfo.text }}</div>
       <div style="margin-top: 15px;position: relative;">
         <iframe ref="videoIframe" style="" :src="currentInfo.video" scrolling="no" border="0" frameborder="no"
           framespacing="0" allowfullscreen="true"> </iframe>
+      </div>
+    </a-modal>
+
+    <a-modal class="visibleStart" :maskStyle="{backdropFilter: 'blur(6px)'}" v-model:visible="visibleStart" :closable="false"  :width="660" :maskClosable="false" closeIcon=""
+      :destroyOnClose="false" :footer="null">
+      <div class="ant-modal-body-content">
+        <img src="../../utils/img1.png" />
+        <div style="padding: 20px 30px;">
+          <div style="font-size: 28px;">欢迎进入“分子视界”</div>
+          <div style=" font-size: 18px;">让我们一起开启奇妙的AR之旅把！</div>
+          <div class="button3" @click="visibleStart = false">
+            <span>G O</span>
+        </div>
+        </div>
       </div>
     </a-modal>
 
@@ -140,10 +154,11 @@ const mode = ref("模型");
 const loaded = ref(false);
 const visible = ref(false);
 const visibleInfo = ref(false);
+const visibleStart = ref(true);
 const isPlay = ref(false);
 const showBackground = ref(true);
 const showAxes = ref(true);
-const currentModel = ref(["CH4"]);
+const currentModel = ref(["H2O"]);
 const openKeys = ref(['分子模型', '无机化合物']);
 const modelList = ref([
   { name: "H2O" },
@@ -308,7 +323,8 @@ window.addEventListener('message', (event) => {
   cursor: pointer;
 }
 
-.ant-modal-content {
+.visibleInfo{
+  .ant-modal-content {
   backdrop-filter: blur(6px);
   background-color: rgb(255 255 255 / 60%);
 }
@@ -317,5 +333,59 @@ window.addEventListener('message', (event) => {
   background-color: unset;
   border-bottom: 1px solid rgb(240 240 240 / 60%);
 }
+}
+.visibleStart{
+  top: 20%;
+  .ant-modal-content{
+    border-radius: 35px;
+  }
+  .ant-modal-body-content{
+    width: 100%;
+    display: flex;
+    >div{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    img{
+      width: 40%;
+    }
+    .button3 {
+        width: 200px;
+        height: 46px;
+        line-height: 46px;
+        background-color: #2e82ff;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 27px;
+        position: relative;
+        cursor: pointer;
+    }
+    .button3::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(to right, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 70%);
+        background-size: 200%;
+        animation: wipes 1s infinite;
+    }
+    @keyframes wipes {
+        0% {
+            background-position: 100% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+  }
+}
+
 </style>
 

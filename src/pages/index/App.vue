@@ -109,10 +109,10 @@
 
     </a-drawer>
 
-    
-    <div v-if="mode === '模型'&&currentInfo.name" class="info" @click="showInfo"><info-outlined /></div>
-    <a-modal class="visibleInfo" v-model:visible="visibleInfo" :title="currentInfo.name" :centered="true" width="660px" :mask="false"
-      :destroyOnClose="true" :footer="null">
+
+    <div v-if="mode === '模型' && currentInfo.name" class="info" @click="showInfo"><info-outlined /></div>
+    <a-modal class="visibleInfo" v-model:visible="visibleInfo" :title="currentInfo.name" :centered="true" width="660px"
+      :mask="false" :destroyOnClose="true" :footer="null">
       <div>{{ currentInfo.text }}</div>
       <div style="margin-top: 15px;position: relative;">
         <iframe ref="videoIframe" style="" :src="currentInfo.video" scrolling="no" border="0" frameborder="no"
@@ -120,16 +120,16 @@
       </div>
     </a-modal>
 
-    <a-modal class="visibleStart" :maskStyle="{backdropFilter: 'blur(6px)'}" v-model:visible="visibleStart" :closable="false"  :width="660" :maskClosable="false" closeIcon=""
-      :destroyOnClose="false" :footer="null">
+    <a-modal class="visibleStart" :maskStyle="{ backdropFilter: 'blur(6px)' }" v-model:visible="visibleStart"
+      :closable="false" :width="660" closeIcon="" :destroyOnClose="false" :footer="null">
       <div class="ant-modal-body-content">
         <img src="../../utils/img1.png" />
         <div style="padding: 20px 30px;">
-          <div style="font-size: 28px;">欢迎进入“分子视界”</div>
-          <div style=" font-size: 18px;">让我们一起开启奇妙的AR之旅把！</div>
+          <div style="font-size: 24px;">欢迎进入“分子视界”</div>
+          <div style=" font-size: 16px;">让我们一起开启奇妙的AR之旅把！</div>
           <div class="button3" @click="visibleStart = false">
             <span>G O</span>
-        </div>
+          </div>
         </div>
       </div>
     </a-modal>
@@ -187,7 +187,7 @@ const dataInfos = {
     text: '甲烷，化学式CH4，是最简单的烃，由一个碳和四个氢原子通过sp3杂化的方式组成，因此甲烷分子的结构为正四面体结构，四个键的键长相同键角相等。',
     video: '//player.bilibili.com/player.html?aid=77751294&bvid=BV1HJ411z7ii&cid=133016052&page=1'
   },
-  sp3:{
+  sp3: {
     name: 'sp3杂化轨道',
     text: 'π键指两个p轨道垂直于键轴以“肩并肩”方式重叠所形成的化学键。形成π键时，原子轨道的重叠部分对等地分布在包括键轴在内的平面上、下两侧，形状相同，符号相反，呈镜面反对称。',
     video: '//player.bilibili.com/player.html?aid=540695830&bvid=BV1Hi4y147rk&cid=192227143&page=1'
@@ -197,13 +197,13 @@ const modelEl = ref()
 const videoIframe = ref()
 const showInfo = () => {
   visibleInfo.value = true
-  setTimeout(()=>{
-    videoIframe.value.onload = ()=> {
+  setTimeout(() => {
+    videoIframe.value.onload = () => {
 
-     };
-  },0)
+    };
+  }, 0)
 }
-const play = () =>{
+const play = () => {
 
 }
 watchEffect(() => {
@@ -323,69 +323,86 @@ window.addEventListener('message', (event) => {
   cursor: pointer;
 }
 
-.visibleInfo{
+.visibleInfo {
   .ant-modal-content {
-  backdrop-filter: blur(6px);
-  background-color: rgb(255 255 255 / 60%);
+    backdrop-filter: blur(6px);
+    background-color: rgb(255 255 255 / 60%);
+  }
+
+  .ant-modal-header {
+    background-color: unset;
+    border-bottom: 1px solid rgb(240 240 240 / 60%);
+  }
 }
 
-.ant-modal-header {
-  background-color: unset;
-  border-bottom: 1px solid rgb(240 240 240 / 60%);
-}
-}
-.visibleStart{
+
+.visibleStart {
   top: 20%;
-  .ant-modal-content{
+
+  .ant-modal-content {
     border-radius: 35px;
   }
-  .ant-modal-body-content{
+
+  @media (max-width: 767px) {
+    .ant-modal-body-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .ant-modal-body-content {
     width: 100%;
     display: flex;
-    >div{
+
+    >div {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      min-height: 205px;
     }
-    img{
+
+    img {
       width: 40%;
     }
+
     .button3 {
-        width: 200px;
-        height: 46px;
-        line-height: 46px;
-        background-color: #2e82ff;
-        color: #ffffff;
-        font-size: 18px;
-        text-align: center;
-        border-radius: 27px;
-        position: relative;
-        cursor: pointer;
+      width: 200px;
+      height: 46px;
+      line-height: 46px;
+      background-color: #2e82ff;
+      color: #ffffff;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 27px;
+      position: relative;
+      cursor: pointer;
     }
+
     .button3::before {
-        content: "";
-        position: absolute;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        background-image: 
-            linear-gradient(to right, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 70%);
-        background-size: 200%;
-        animation: wipes 1s infinite;
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 70%);
+      background-size: 200%;
+      animation: wipes 1s infinite;
     }
+
     @keyframes wipes {
-        0% {
-            background-position: 100% 0;
-        }
-        100% {
-            background-position: 0 0;
-        }
+      0% {
+        background-position: 100% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
     }
 
   }
 }
-
 </style>
 
